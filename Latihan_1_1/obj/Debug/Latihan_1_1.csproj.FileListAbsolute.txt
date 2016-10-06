@@ -6,3 +6,6 @@ E:\Mikroskil\Semester V\.NET Framework Lanjutan\Tugas Framework git\Senin_141110
 E:\Mikroskil\Semester V\.NET Framework Lanjutan\Tugas Framework git\Senin_141110043_KenedyLukito\Latihan_1_1\obj\Debug\Latihan_1_1.csproj.GenerateResource.Cache
 E:\Mikroskil\Semester V\.NET Framework Lanjutan\Tugas Framework git\Senin_141110043_KenedyLukito\Latihan_1_1\obj\Debug\Latihan_1_1.exe
 E:\Mikroskil\Semester V\.NET Framework Lanjutan\Tugas Framework git\Senin_141110043_KenedyLukito\Latihan_1_1\obj\Debug\Latihan_1_1.pdb
+E:\Mikroskil\Semester V\.NET Framework Lanjutan\New folder\Senin_141110043_KenedyLukito\Latihan_1_1\bin\Debug\Latihan_1_1.exe.config
+E:\Mikroskil\Semester V\.NET Framework Lanjutan\New folder\Senin_141110043_KenedyLukito\Latihan_1_1\obj\Debug\Latihan_1_1.exe
+E:\Mikroskil\Semester V\.NET Framework Lanjutan\New folder\Senin_141110043_KenedyLukito\Latihan_1_1\obj\Debug\Latihan_1_1.pdb
