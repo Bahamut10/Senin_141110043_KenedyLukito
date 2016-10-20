@@ -55,14 +55,15 @@ namespace Latihan_3_1
             }
             this.fcolor.ComboBox.DrawItem += new DrawItemEventHandler(fcolor_DrawItem);
 
-            fsize.Text = "11";
-            ffamily.Text = "Times New Roman";
+            string ss = "Times New Roman";
+            fsize.Text = "12";
             fcolor.Text = "Black";
+            //MessageBox.Show(richTextBox1.SelectionFont.FontFamily.Name);
+            richTextBox1.Font = new Font(ss, 12);
             boldButton.CheckOnClick = true;
             italicButton.CheckOnClick = true;
             underlineButton.CheckOnClick = true;
         }
-
         private void fcolor_DrawItem(object sender, DrawItemEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -79,16 +80,10 @@ namespace Latihan_3_1
             }
 
         }
-        private void fsize_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ToolStripComboBox fokus = (ToolStripComboBox)sender;
-            if (!fokus.Focused) return;
-            styling();
-        }
 
         private void fsize_typing(object sender, EventArgs e)
         {
-            styling();
+            size();
         }
         private void ffamily_typing(object sender, EventArgs e)
         {
@@ -96,7 +91,13 @@ namespace Latihan_3_1
         }
         private void fcolor_typing(object sender, EventArgs e)
         {
-            ubahwarna();
+            color();
+        }
+        private void fsize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ToolStripComboBox fokus = (ToolStripComboBox)sender;
+            if (!fokus.Focused) return;
+            size();
         }
         private void ffamily_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -104,21 +105,86 @@ namespace Latihan_3_1
         }
         private void fcolor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ubahwarna();
+            color();
         }
         private void boldButton_Click_1(object sender, EventArgs e)
         {
-            styling();
+            System.Drawing.FontStyle state = (boldButton.Checked) ? FontStyle.Bold : FontStyle.Regular;
+            state |= (italicButton.Checked) ? FontStyle.Italic : FontStyle.Regular;
+            state |= (underlineButton.Checked) ? FontStyle.Underline : FontStyle.Regular;
+            int start = richTextBox1.SelectionStart;
+            int finish = richTextBox1.SelectionLength;
+             
+            if (finish != 0)
+            {
+                
+                for (int i = start; i < start + finish; i++)
+                {
+                    richTextBox1.SelectionStart = i;
+                    richTextBox1.SelectionLength = 1;
+                    Font font = new Font(richTextBox1.SelectionFont.FontFamily, richTextBox1.SelectionFont.Size, state);
+                    richTextBox1.SelectionFont = font;
+                }
+                richTextBox1.SelectionStart = start;
+                richTextBox1.SelectionLength = finish;
+            }
+            else
+            {
+                Font font = new Font(richTextBox1.SelectionFont.FontFamily, richTextBox1.SelectionFont.Size, state);
+                richTextBox1.SelectionFont = font;
+            }
         }
 
         private void italicButton_Click(object sender, EventArgs e)
         {
-            styling();
+            System.Drawing.FontStyle state = (boldButton.Checked) ? FontStyle.Bold : FontStyle.Regular;
+            state |= (italicButton.Checked) ? FontStyle.Italic : FontStyle.Regular;
+            state |= (underlineButton.Checked) ? FontStyle.Underline : FontStyle.Regular;
+            int start = richTextBox1.SelectionStart;
+            int finish = richTextBox1.SelectionLength;
+            if (finish != 0)
+            {
+                for (int i = start; i < start + finish; i++)
+                {
+                    richTextBox1.SelectionStart = i;
+                    richTextBox1.SelectionLength = 1;
+                    Font font = new Font(richTextBox1.SelectionFont.FontFamily, richTextBox1.SelectionFont.Size, state);
+                    richTextBox1.SelectionFont = font;
+                }
+                richTextBox1.SelectionStart = start;
+                richTextBox1.SelectionLength = finish;
+            }
+            else
+            {
+                Font font = new Font(richTextBox1.SelectionFont.FontFamily, richTextBox1.SelectionFont.Size, state);
+                richTextBox1.SelectionFont = font;
+            }
         }
 
         private void underlineButton_Click(object sender, EventArgs e)
         {
-            styling();
+            System.Drawing.FontStyle state = (boldButton.Checked) ? FontStyle.Bold : FontStyle.Regular;
+            state |= (italicButton.Checked) ? FontStyle.Italic : FontStyle.Regular;
+            state |= (underlineButton.Checked) ? FontStyle.Underline : FontStyle.Regular;
+            int start = richTextBox1.SelectionStart;
+            int finish = richTextBox1.SelectionLength;
+            if (finish != 0)
+            {
+                for (int i = start; i < start + finish; i++)
+                {
+                    richTextBox1.SelectionStart = i;
+                    richTextBox1.SelectionLength = 1;
+                    Font font = new Font(richTextBox1.SelectionFont.FontFamily, richTextBox1.SelectionFont.Size, state);
+                    richTextBox1.SelectionFont = font;
+                }
+                richTextBox1.SelectionStart = start;
+                richTextBox1.SelectionLength = finish;
+            }
+            else
+            {
+                Font font = new Font(richTextBox1.SelectionFont.FontFamily, richTextBox1.SelectionFont.Size, state);
+                richTextBox1.SelectionFont = font;
+            }
         }
         private void richTextBox1_SelectionChanged(object sender, EventArgs e)
         {
@@ -127,40 +193,84 @@ namespace Latihan_3_1
             underlineButton.Checked = false;
             if(richTextBox1.SelectionFont!=null)
             {
-                if (richTextBox1.SelectionFont.Style.ToString().IndexOf("Bold")>=0) boldButton.Checked = true;
-                if (richTextBox1.SelectionFont.Style.ToString().IndexOf("Italic") >= 0) italicButton.Checked = true;
-                if (richTextBox1.SelectionFont.Style.ToString().IndexOf("Underline") >= 0) underlineButton.Checked = true;
                 fsize.Text = richTextBox1.SelectionFont.Size.ToString();
                 ffamily.Text = richTextBox1.SelectionFont.FontFamily.Name;
                 fcolor.Text = richTextBox1.SelectionColor.Name;
+                if (richTextBox1.SelectionFont.Style.ToString().IndexOf("Bold")>=0) boldButton.Checked = true;
+                if (richTextBox1.SelectionFont.Style.ToString().IndexOf("Italic") >= 0) italicButton.Checked = true;
+                if (richTextBox1.SelectionFont.Style.ToString().IndexOf("Underline") >= 0) underlineButton.Checked = true;
             }
             else
             {
-                ffamily.Text = "";
                 fsize.Text = "";
-                fcolor.Text = "";
+                ffamily.Text = "";
+                //fcolor.Text = "";
             }
 
         }        
-       private void ubahwarna()
+        private void size()
+        {
+            int start = richTextBox1.SelectionStart;
+            int finish = richTextBox1.SelectionLength;
+            try
+            {
+                float fs = (fsize.Text == "") ? 12 : Convert.ToSingle(fsize.Text);
+                if (finish != 0)
+                {
+                    for (int i = start; i < start + finish; i++)
+                    {
+                        richTextBox1.SelectionStart = i;
+                        richTextBox1.SelectionLength = 1;
+                        Font font = new Font(richTextBox1.SelectionFont.FontFamily, fs, richTextBox1.SelectionFont.Style);
+                        richTextBox1.SelectionFont = font;
+                    }
+                    richTextBox1.SelectionStart = start;
+                    richTextBox1.SelectionLength = finish;
+                }
+                else
+                {
+                    Font font = new Font(richTextBox1.SelectionFont.FontFamily, fs, richTextBox1.SelectionFont.Style);
+                    richTextBox1.SelectionFont = font;
+                    richTextBox1.Focus();
+                }
+            }
+            catch
+            {
+                return;
+            }
+        }
+        private void color()
         {
             richTextBox1.SelectionColor = Color.FromName(fcolor.Text);
             //richTextBox1.Focus();
         }
         private void styling()
         {
-            System.Drawing.FontStyle state = (boldButton.Checked)? FontStyle.Bold : FontStyle.Regular;
-            state|=(italicButton.Checked)? FontStyle.Italic : FontStyle.Regular;
-            state|=(underlineButton.Checked)? FontStyle.Underline : FontStyle.Regular;
+            int start = richTextBox1.SelectionStart;
+            int finish = richTextBox1.SelectionLength;
             try
             {
-                Font font = new Font((ffamily.Text == "") ? "Times New Roman" : ffamily.Text, (fsize.Text == "") ? 11 : Convert.ToSingle(fsize.Text), state);
-                richTextBox1.SelectionFont = font;
+                string fstring = ffamily.Text;
+                ffamily.Text = fstring;
+                for (int i = start; i < start + finish; i++)
+                {
+                    richTextBox1.SelectionStart = i;
+                    richTextBox1.SelectionLength = 1;
+                    Font font = new Font(fstring, richTextBox1.SelectionFont.Size, richTextBox1.SelectionFont.Style);
+                    richTextBox1.SelectionFont = font;
+                }
+                richTextBox1.SelectionStart = start;
+                richTextBox1.SelectionLength = finish;
             }
             catch
             {
                 return;
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ffamily.Text = "Times New Roman";
         }     
     }
 }

@@ -72,7 +72,7 @@ namespace Latihan_3_1
             this.fsize.Name = "fsize";
             this.fsize.Size = new System.Drawing.Size(121, 25);
             this.fsize.SelectedIndexChanged += new System.EventHandler(this.fsize_SelectedIndexChanged);
-            this.fsize.KeyUp += new System.Windows.Forms.KeyEventHandler(this.fsize_typing);
+            this.fsize.Leave += new System.EventHandler(this.fsize_typing);
             // 
             // boldButton
             // 
@@ -109,7 +109,7 @@ namespace Latihan_3_1
             this.ffamily.Name = "ffamily";
             this.ffamily.Size = new System.Drawing.Size(200, 25);
             this.ffamily.SelectedIndexChanged += new System.EventHandler(this.ffamily_SelectedIndexChanged);
-            this.ffamily.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ffamily_typing);
+            this.ffamily.Leave += new System.EventHandler(this.ffamily_typing);
             // 
             // fcolor
             // 
@@ -127,6 +127,7 @@ namespace Latihan_3_1
             this.Controls.Add(this.richTextBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
