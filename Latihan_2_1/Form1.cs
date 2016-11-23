@@ -39,11 +39,11 @@ namespace Latihan_2_1
         {
             if (domainUpDown1.SelectedIndex + 1 == 2 && numericUpDown1.Value > 29)
             {
-                MessageBox.Show("Inputted date not available");
+                MessageBox.Show("Inputted date is not available");
             }
             else if (domainUpDown1.SelectedIndex + 1 <= 7 && (domainUpDown1.SelectedIndex + 1) % 2 == 0 && numericUpDown1.Value > 30)
             {
-                MessageBox.Show("Inputted date not available");
+                MessageBox.Show("Inputted date is not available");
             }
             else if (domainUpDown1.SelectedIndex + 1 > 7 && (domainUpDown1.SelectedIndex + 1) % 2 != 0 && numericUpDown1.Value > 30)
             {
@@ -62,15 +62,15 @@ namespace Latihan_2_1
         {
             if (domainUpDown1.SelectedIndex + 1 == 2 && numericUpDown1.Value > 29)
             {
-                MessageBox.Show("Inputted date not available");
+                MessageBox.Show("Inputted date is not available");
             }
             else if (domainUpDown1.SelectedIndex + 1 <= 7 && (domainUpDown1.SelectedIndex + 1) % 2 == 0 && numericUpDown1.Value > 30)
             {
-                MessageBox.Show("Inputted date not available");
+                MessageBox.Show("Inputted date is not available");
             }
             else if (domainUpDown1.SelectedIndex + 1 > 7 && (domainUpDown1.SelectedIndex + 1) % 2 != 0 && numericUpDown1.Value > 30)
             {
-                MessageBox.Show("Inputted date not available");
+                MessageBox.Show("Inputted date is not available");
             }
             else if (numericUpDown1.Value > 1 && numericUpDown1.Value < 31)
             {
