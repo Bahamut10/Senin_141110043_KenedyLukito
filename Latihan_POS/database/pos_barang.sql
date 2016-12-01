@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2016 at 08:25 AM
+-- Generation Time: Dec 01, 2016 at 11:54 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -38,14 +38,6 @@ CREATE TABLE `pos_barang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pos_barang`
---
-
-INSERT INTO `pos_barang` (`ID`, `Kode`, `Nama`, `Jumlah_Awal`, `Harga_HPP`, `Harga_Jual`, `Created_at`, `Updated_at`) VALUES
-(4, 'bbbbb', 'asdasdf', 1, '2999.00', '4000.00', '2016-12-01 14:10:42', '2016-12-01 14:10:42'),
-(5, 'aaa', 'werwerwer', 1000, '20000.00', '20001.00', '2016-12-01 14:24:45', '2016-12-01 14:24:45');
-
---
 -- Indexes for dumped tables
 --
 
@@ -63,7 +55,7 @@ ALTER TABLE `pos_barang`
 -- AUTO_INCREMENT for table `pos_barang`
 --
 ALTER TABLE `pos_barang`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

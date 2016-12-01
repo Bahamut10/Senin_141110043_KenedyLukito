@@ -112,42 +112,42 @@
             this.txtKode.Location = new System.Drawing.Point(115, 32);
             this.txtKode.Name = "txtKode";
             this.txtKode.Size = new System.Drawing.Size(100, 20);
-            this.txtKode.TabIndex = 1;
+            this.txtKode.TabIndex = 2;
             // 
             // txtNama
             // 
             this.txtNama.Location = new System.Drawing.Point(115, 58);
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(100, 20);
-            this.txtNama.TabIndex = 1;
+            this.txtNama.TabIndex = 3;
             // 
             // txtJlhAwal
             // 
             this.txtJlhAwal.Location = new System.Drawing.Point(115, 84);
             this.txtJlhAwal.Name = "txtJlhAwal";
             this.txtJlhAwal.Size = new System.Drawing.Size(100, 20);
-            this.txtJlhAwal.TabIndex = 1;
+            this.txtJlhAwal.TabIndex = 4;
             // 
             // txtHPP
             // 
             this.txtHPP.Location = new System.Drawing.Point(115, 110);
             this.txtHPP.Name = "txtHPP";
             this.txtHPP.Size = new System.Drawing.Size(100, 20);
-            this.txtHPP.TabIndex = 1;
+            this.txtHPP.TabIndex = 5;
             // 
             // txtJual
             // 
             this.txtJual.Location = new System.Drawing.Point(115, 136);
             this.txtJual.Name = "txtJual";
             this.txtJual.Size = new System.Drawing.Size(100, 20);
-            this.txtJual.TabIndex = 1;
+            this.txtJual.TabIndex = 6;
             // 
             // btnOK
             // 
             this.btnOK.Location = new System.Drawing.Point(3, 169);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
-            this.btnOK.TabIndex = 2;
+            this.btnOK.TabIndex = 7;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -157,18 +157,20 @@
             this.btnReset.Location = new System.Drawing.Point(84, 169);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
-            this.btnReset.TabIndex = 2;
+            this.btnReset.TabIndex = 8;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(165, 169);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 2;
+            this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // Daftar_Barang
             // 

@@ -30,5 +30,10 @@ namespace Latihan_POS
             df.MdiParent = this;
             df.Show();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
