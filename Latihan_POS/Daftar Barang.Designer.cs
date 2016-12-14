@@ -217,5 +217,6 @@
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnCancel;
+
     }
 }

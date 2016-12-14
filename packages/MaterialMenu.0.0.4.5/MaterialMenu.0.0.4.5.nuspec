@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>MaterialMenu</id>
+    <version>0.0.4.5</version>
+    <title>MaterialMenu</title>
+    <authors>Beto Rodriguez</authors>
+    <owners>Beto Rodriguez</owners>
+    <licenseUrl>https://github.com/beto-rodriguez/MaterialMenu/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/beto-rodriguez/MaterialMenu</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Wpf app-like side menu</description>
+    <summary />
+    <releaseNotes />
+    <copyright>Copyright 2015</copyright>
+    <tags>Wpf Menu SideMenu Material</tags>
+  </metadata>
+</package>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>MaterialDesign.dll</id>
+    <version>1.0.0</version>
+    <title>MaterialDesign resources</title>
+    <authors>Daniel Verhoef</authors>
+    <owners>Daniel Verhoef</owners>
+    <iconUrl>http://download1501.mediafire.com/nxdm8d6it4fg/mrc2fb9suz5tj07/Material.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This library contains a lot of usefull stuff for design your .Net application.
+
+example code:
+
+            MaterialDesign.Colors.Palettes.GetColor(new Lightness(6), PalletteList.Red());</description>
+    <summary>This library contains a lot of usefull stuff for design your .Net application.</summary>
+    <releaseNotes>Released!</releaseNotes>
+    <copyright>Copyright Daniel Verhoef 2016</copyright>
+    <tags>MaterialDesign Material Design</tags>
+    <dependencies>
+      <dependency id="SampleDependency" version="1.0.0" />
+    </dependencies>
+  </metadata>
+</package>

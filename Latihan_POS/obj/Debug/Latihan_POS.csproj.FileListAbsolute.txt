@@ -10,3 +10,6 @@ D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukit
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\Latihan_POS\obj\Debug\Latihan_POS.pdb
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\Latihan_POS\bin\Debug\MySql.Data.dll
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\Latihan_POS\bin\Debug\MySql.Web.dll
+D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\Latihan_POS\bin\Debug\MaterialMenu.dll
+D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\Latihan_POS\bin\Debug\MaterialSkin.dll
+D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\Latihan_POS\obj\Debug\Latihan_POS.MainForm.resources
