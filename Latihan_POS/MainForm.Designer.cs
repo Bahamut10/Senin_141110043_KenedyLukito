@@ -163,6 +163,9 @@
             // 
             // materialTabControl1
             // 
+            this.materialTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.materialTabControl1.Controls.Add(this.Barang);
             this.materialTabControl1.Controls.Add(this.Customer);
             this.materialTabControl1.Controls.Add(this.Supplier);
@@ -189,6 +192,8 @@
             // 
             // materialTabControl4
             // 
+            this.materialTabControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.materialTabControl4.Controls.Add(this.binput);
             this.materialTabControl4.Controls.Add(this.bedit);
             this.materialTabControl4.Controls.Add(this.bdelete);
@@ -735,11 +740,15 @@
             this.dgvbarang.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvbarang.Location = new System.Drawing.Point(-9, 0);
             this.dgvbarang.Name = "dgvbarang";
+            this.dgvbarang.RowHeadersVisible = false;
             this.dgvbarang.Size = new System.Drawing.Size(619, 243);
             this.dgvbarang.TabIndex = 0;
+            this.dgvbarang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvbarang_CellClick);
             // 
             // materialTabSelector4
             // 
+            this.materialTabSelector4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.materialTabSelector4.BaseTabControl = this.materialTabControl4;
             this.materialTabSelector4.Depth = 0;
             this.materialTabSelector4.Location = new System.Drawing.Point(-15, 0);
@@ -1190,11 +1199,15 @@
             this.dgvCustomer.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvCustomer.Location = new System.Drawing.Point(0, 0);
             this.dgvCustomer.Name = "dgvCustomer";
+            this.dgvCustomer.RowHeadersVisible = false;
             this.dgvCustomer.Size = new System.Drawing.Size(619, 239);
             this.dgvCustomer.TabIndex = 2;
+            this.dgvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellClick);
             // 
             // materialTabSelector1
             // 
+            this.materialTabSelector1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.materialTabSelector1.BaseTabControl = this.materialTabControl2;
             this.materialTabSelector1.Depth = 0;
             this.materialTabSelector1.Location = new System.Drawing.Point(-4, 0);
@@ -1217,6 +1230,9 @@
             // 
             // materialTabControl3
             // 
+            this.materialTabControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.materialTabControl3.Controls.Add(this.sinput);
             this.materialTabControl3.Controls.Add(this.sedit);
             this.materialTabControl3.Controls.Add(this.sdelete);
@@ -1637,15 +1653,21 @@
             // 
             // dgvSupplier
             // 
+            this.dgvSupplier.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSupplier.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvSupplier.Location = new System.Drawing.Point(-7, 0);
+            this.dgvSupplier.Location = new System.Drawing.Point(-4, 0);
             this.dgvSupplier.Name = "dgvSupplier";
-            this.dgvSupplier.Size = new System.Drawing.Size(612, 243);
+            this.dgvSupplier.RowHeadersVisible = false;
+            this.dgvSupplier.Size = new System.Drawing.Size(609, 243);
             this.dgvSupplier.TabIndex = 0;
+            this.dgvSupplier.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupplier_CellClick);
             // 
             // materialTabSelector2
             // 
+            this.materialTabSelector2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.materialTabSelector2.BaseTabControl = this.materialTabControl3;
             this.materialTabSelector2.Depth = 0;
             this.materialTabSelector2.Location = new System.Drawing.Point(-4, 0);
@@ -1657,12 +1679,15 @@
             // 
             // materialTabSelector3
             // 
+            this.materialTabSelector3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.materialTabSelector3.BaseTabControl = this.materialTabControl1;
             this.materialTabSelector3.Depth = 0;
-            this.materialTabSelector3.Location = new System.Drawing.Point(103, 26);
+            this.materialTabSelector3.Location = new System.Drawing.Point(126, 26);
             this.materialTabSelector3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector3.Name = "materialTabSelector3";
-            this.materialTabSelector3.Size = new System.Drawing.Size(521, 34);
+            this.materialTabSelector3.Size = new System.Drawing.Size(498, 34);
             this.materialTabSelector3.TabIndex = 1;
             this.materialTabSelector3.Text = "materialTabSelector3";
             // 
@@ -1670,11 +1695,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(627, 381);
             this.Controls.Add(this.materialTabSelector3);
             this.Controls.Add(this.materialTabControl1);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "Point of Sales";
             this.materialTabControl1.ResumeLayout(false);
             this.Barang.ResumeLayout(false);
             this.materialTabControl4.ResumeLayout(false);

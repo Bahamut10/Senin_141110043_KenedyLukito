@@ -85,49 +85,55 @@ namespace Latihan_POS
 
         private void materialTabControl2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero datetime=true");
-            MySqlDataAdapter da;
-            DataSet ds;
-            try
+            if (materialTabControl2.SelectedTab.Name == "cdaftar")
             {
-                con.Open();
-                ds = new DataSet();
-                da = new MySqlDataAdapter("SELECT * FROM pos_customer", con);
-                da.Fill(ds, "pos_customer");
-                dgvCustomer.ReadOnly = true;
-                dgvCustomer.AllowUserToAddRows = false;
-                dgvCustomer.AllowUserToDeleteRows = false;
-                dgvCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dgvCustomer.DataSource = ds.Tables["pos_customer"];
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Alert");
+                MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero datetime=true");
+                MySqlDataAdapter da;
+                DataSet ds;
+                try
+                {
+                    con.Open();
+                    ds = new DataSet();
+                    da = new MySqlDataAdapter("SELECT * FROM pos_customer", con);
+                    da.Fill(ds, "pos_customer");
+                    dgvCustomer.ReadOnly = true;
+                    dgvCustomer.AllowUserToAddRows = false;
+                    dgvCustomer.AllowUserToDeleteRows = false;
+                    dgvCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    dgvCustomer.DataSource = ds.Tables["pos_customer"];
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Alert");
+                }
             }
         }
 
         private void materialTabControl4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero Datetime=True");
-            MySqlDataAdapter da;
-            DataSet ds;
-            try
+            if (materialTabControl4.SelectedTab == bdaftar)
             {
-                con.Open();
-                ds = new DataSet();
-                da = new MySqlDataAdapter("SELECT * FROM pos_barang", con);
-                da.Fill(ds, "pos_barang");
-                dgvbarang.ReadOnly = true;
-                dgvbarang.AllowUserToAddRows = false;
-                dgvbarang.AllowUserToDeleteRows = false;
-                dgvbarang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dgvbarang.DataSource = ds.Tables["pos_barang"];
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Alert");
+                MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero Datetime=True");
+                MySqlDataAdapter da;
+                DataSet ds;
+                try
+                {
+                    con.Open();
+                    ds = new DataSet();
+                    da = new MySqlDataAdapter("SELECT * FROM pos_barang", con);
+                    da.Fill(ds, "pos_barang");
+                    dgvbarang.ReadOnly = true;
+                    dgvbarang.AllowUserToAddRows = false;
+                    dgvbarang.AllowUserToDeleteRows = false;
+                    dgvbarang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    dgvbarang.DataSource = ds.Tables["pos_barang"];
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Alert");
+                }
             }
         }
 
@@ -164,39 +170,51 @@ namespace Latihan_POS
         }
         private void materialTabControl3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero datetime=true");
-            MySqlDataAdapter da;
-            DataSet ds;
-            try
+            if (materialTabControl3.SelectedTab.Name == "sdaftar")
             {
-                con.Open();
-                ds = new DataSet();
-                da = new MySqlDataAdapter("SELECT * FROM pos_supplier", con);
-                da.Fill(ds, "pos_supplier");
-                dgvSupplier.ReadOnly = true;
-                dgvSupplier.AllowUserToAddRows = false;
-                dgvSupplier.AllowUserToDeleteRows = false;
-                dgvSupplier.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dgvSupplier.DataSource = ds.Tables["pos_supplier"];
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Alert");
+                MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero datetime=true");
+                MySqlDataAdapter da;
+                DataSet ds;
+                try
+                {
+                    con.Open();
+                    ds = new DataSet();
+                    da = new MySqlDataAdapter("SELECT * FROM pos_supplier", con);
+                    da.Fill(ds, "pos_supplier");
+                    dgvSupplier.ReadOnly = true;
+                    dgvSupplier.AllowUserToAddRows = false;
+                    dgvSupplier.AllowUserToDeleteRows = false;
+                    dgvSupplier.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    dgvSupplier.DataSource = ds.Tables["pos_supplier"];
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Alert");
+                }
             }
         }
         private void ebtnOK_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero datetime=true");
             MySqlDataAdapter da;
+            string mess;
             try
             {
                 con.Open();
                 da = new MySqlDataAdapter();
-                string sql = String.Concat("update pos_barang set Kode=", etxtKode.Text, ",Nama=", etxtNama.Text, ",Jumlah_Awal=", Convert.ToInt32(etxtJlhAwal.Text), ",Harga_HPP=", Convert.ToDecimal(etxtHPP.Text), ",Harga_Jual=", Convert.ToDecimal(etxtJual.Text), ",Created_at=NOW(),Updated_at=NOW() where ", etxtID.Text, "=pos_barang.ID");
-                da.InsertCommand = new MySqlCommand(sql, con);
-                string mess = String.Concat(da.InsertCommand.ExecuteNonQuery(), " Record Updated Successfully");
-                MessageBox.Show(mess, "Success");
+                string sql = String.Concat("update pos_barang set Kode='", etxtKode.Text, "',Nama='", etxtNama.Text, "',Jumlah_Awal=", Convert.ToInt32(etxtJlhAwal.Text), ",Harga_HPP=", Convert.ToDecimal(etxtHPP.Text), ",Harga_Jual=", Convert.ToDecimal(etxtJual.Text), ",Updated_at=NOW() where ", etxtID.Text, "=pos_barang.ID");
+                da.UpdateCommand = new MySqlCommand(sql, con);
+                if (da.UpdateCommand.ExecuteNonQuery() == 0)
+                {
+                    mess = "Record not found";
+                    MessageBox.Show(mess, "Alert");
+                }
+                else
+                {
+                    mess = String.Concat(da.UpdateCommand.ExecuteNonQuery(), " Record Updated Successfully");
+                    MessageBox.Show(mess, "Success");
+                }
                 con.Close();
             }
             catch (Exception ex)
@@ -223,14 +241,23 @@ namespace Latihan_POS
         {
             MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero datetime=true");
             MySqlDataAdapter da;
+            string mess;
             try
             {
                 con.Open();
                 da = new MySqlDataAdapter();
-                string sql = String.Concat("update pos_customer set Kode=", csEdittxtKode.Text, ",Nama=", csEdittxtNama.Text, ",Alamat=", csEdittxtAlamat.Text, ",Created_at=NOW(),Updated_at=NOW() where ", csEdittxtID.Text, "=pos_customer.ID");
-                da.InsertCommand = new MySqlCommand(sql, con);
-                string mess = String.Concat(da.InsertCommand.ExecuteNonQuery(), " Record Updated Successfully");
-                MessageBox.Show(mess, "Success");
+                string sql = String.Concat("update pos_customer set Kode='", csEdittxtKode.Text, "',Nama='", csEdittxtNama.Text, "',Alamat='", csEdittxtAlamat.Text, "',Updated_at=NOW() where ", csEdittxtID.Text, "=pos_customer.ID");
+                da.UpdateCommand = new MySqlCommand(sql, con);
+                if (da.UpdateCommand.ExecuteNonQuery() == 0)
+                {
+                    mess = "Record not found";
+                    MessageBox.Show(mess, "Alert");
+                }
+                else
+                {
+                    mess = String.Concat(da.UpdateCommand.ExecuteNonQuery(), " Record Updated Successfully");
+                    MessageBox.Show(mess, "Success");
+                }
                 con.Close();
             }
             catch (Exception ex)
@@ -255,15 +282,25 @@ namespace Latihan_POS
         {
             MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero datetime=true");
             MySqlDataAdapter da;
+            string mess;
             try
             {
                 con.Open();
                 da = new MySqlDataAdapter();
-                string sql = String.Concat("update pos_supplier set Kode=", spEdittxtKode.Text, ",Nama='", spEdittxtNama.Text, "',Alamat='", spEdittxtAlamat.Text, "',Created_at = NOW(),Updated_at = NOW() where ", spEdittxtID.Text, "=pos_supplier.ID");
-                da.InsertCommand = new MySqlCommand(sql, con);
-                string mess = String.Concat(da.InsertCommand.ExecuteNonQuery(), " Record Updated Successfully");
-                MessageBox.Show(mess, "Success");
+                string sql = String.Concat("update pos_supplier set Kode='", spEdittxtKode.Text, "',Nama='", spEdittxtNama.Text, "',Alamat='", spEdittxtAlamat.Text, "',Updated_at = NOW() where ", spEdittxtID.Text, "=pos_supplier.ID");
+                da.UpdateCommand = new MySqlCommand(sql, con);
+                if (da.UpdateCommand.ExecuteNonQuery() == 0)
+                {
+                    mess = "Record not found";
+                    MessageBox.Show(mess, "Alert");
+                }
+                else
+                {
+                    mess = String.Concat(da.UpdateCommand.ExecuteNonQuery(), " Record Updated Successfully");
+                    MessageBox.Show(mess, "Success");
+                }
                 con.Close();
+                mess = "";
             }
             catch (Exception ex)
             {
@@ -285,8 +322,10 @@ namespace Latihan_POS
 
         private void materialRaisedButton3_Click(object sender, EventArgs e)
         {
+            //dDeletebtnOK
             MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero datetime=true");
             MySqlDataAdapter da;
+            string mess;
             DialogResult dialogresult = MessageBox.Show("Do you really want to delete this record?", "Are You Sure?", MessageBoxButtons.YesNoCancel);
             if (dialogresult == DialogResult.Yes)
             {
@@ -295,9 +334,17 @@ namespace Latihan_POS
                     con.Open();
                     da = new MySqlDataAdapter();
                     string sql = String.Concat("delete from pos_barang where pos_barang.ID=", dtxtID.Text);
-                    da.InsertCommand = new MySqlCommand(sql, con);
-                    string mess = String.Concat(da.InsertCommand.ExecuteNonQuery(), " Record Deleted Successfully");
-                    MessageBox.Show(mess, "Success");
+                    da.DeleteCommand = new MySqlCommand(sql, con);
+                    if (da.DeleteCommand.ExecuteNonQuery() == 0)
+                    {
+                        mess = "Record not found";
+                        MessageBox.Show(mess, "Alert");
+                    }
+                    else
+                    {
+                        mess = String.Concat(da.DeleteCommand.ExecuteNonQuery()+1, " Record Deleted Successfully");
+                        MessageBox.Show(mess, "Success");
+                    }
                     con.Close();
                 }
                 catch (Exception ex)
@@ -321,6 +368,7 @@ namespace Latihan_POS
         {
             MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero datetime=true");
             MySqlDataAdapter da;
+            string mess;
             DialogResult dialogresult = MessageBox.Show("Do you really want to delete this record?", "Are You Sure?", MessageBoxButtons.YesNoCancel);
             if (dialogresult == DialogResult.Yes)
             {
@@ -329,9 +377,17 @@ namespace Latihan_POS
                     con.Open();
                     da = new MySqlDataAdapter();
                     string sql = String.Concat("delete from pos_customer where pos_customer.ID=", csDeletetxtID.Text);
-                    da.InsertCommand = new MySqlCommand(sql, con);
-                    string mess = String.Concat(da.InsertCommand.ExecuteNonQuery(), " Record Deleted Successfully");
-                    MessageBox.Show(mess, "Success");
+                    da.DeleteCommand = new MySqlCommand(sql, con);
+                    if (da.DeleteCommand.ExecuteNonQuery() == 0)
+                    {
+                        mess = "Record not found";
+                        MessageBox.Show(mess, "Alert");
+                    }
+                    else
+                    {
+                        mess = String.Concat(da.DeleteCommand.ExecuteNonQuery()+1, " Record Deleted Successfully");
+                        MessageBox.Show(mess, "Success");
+                    }
                     con.Close();
                 }
                 catch (Exception ex)
@@ -355,6 +411,7 @@ namespace Latihan_POS
         {
             MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero datetime=true");
             MySqlDataAdapter da;
+            string mess;
             DialogResult dialogresult = MessageBox.Show("Do you really want to delete this record?", "Are You Sure?", MessageBoxButtons.YesNoCancel);
             if (dialogresult == DialogResult.Yes)
             {
@@ -363,15 +420,76 @@ namespace Latihan_POS
                     con.Open();
                     da = new MySqlDataAdapter();
                     string sql = String.Concat("delete from pos_supplier where pos_supplier.ID=", spDeletetxtID.Text);
-                    da.InsertCommand = new MySqlCommand(sql, con);
-                    string mess = String.Concat(da.InsertCommand.ExecuteNonQuery(), " Record Deleted Successfully");
-                    MessageBox.Show(mess, "Success");
+                    da.DeleteCommand = new MySqlCommand(sql, con);
+                    if (da.DeleteCommand.ExecuteNonQuery() == 0)
+                    {
+                        mess = "Record not found";
+                        MessageBox.Show(mess, "Alert");
+                    }
+                    else
+                    {
+                        mess = String.Concat(da.DeleteCommand.ExecuteNonQuery()+1, " Record Deleted Successfully");
+                        MessageBox.Show(mess, "Success");
+                    }
                     con.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Alert");
                 }
+            }
+        }
+
+        private void dgvbarang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                etxtID.Text = dgvbarang.Rows[e.RowIndex].Cells[0].Value.ToString();
+                etxtKode.Text = dgvbarang.Rows[e.RowIndex].Cells[1].Value.ToString();
+                etxtNama.Text = dgvbarang.Rows[e.RowIndex].Cells[2].Value.ToString();
+                etxtJlhAwal.Text = dgvbarang.Rows[e.RowIndex].Cells[3].Value.ToString();
+                etxtHPP.Text = dgvbarang.Rows[e.RowIndex].Cells[4].Value.ToString();
+                etxtJual.Text = dgvbarang.Rows[e.RowIndex].Cells[5].Value.ToString();
+                dtxtID.Text = dgvbarang.Rows[e.RowIndex].Cells[0].Value.ToString();
+                materialTabControl4.SelectedTab=bedit;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Alert");
+            }
+        }
+
+        private void dgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                csEdittxtID.Text = dgvCustomer.Rows[e.RowIndex].Cells[0].Value.ToString();
+                csEdittxtKode.Text = dgvCustomer.Rows[e.RowIndex].Cells[1].Value.ToString();
+                csEdittxtNama.Text = dgvCustomer.Rows[e.RowIndex].Cells[2].Value.ToString();
+                csEdittxtAlamat.Text = dgvCustomer.Rows[e.RowIndex].Cells[3].Value.ToString();
+                csDeletetxtID.Text = dgvCustomer.Rows[e.RowIndex].Cells[0].Value.ToString();
+                materialTabControl2.SelectedTab = cedit;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Alert");
+            }
+        }
+
+        private void dgvSupplier_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                spEdittxtID.Text = dgvSupplier.Rows[e.RowIndex].Cells[0].Value.ToString();
+                spEdittxtKode.Text = dgvSupplier.Rows[e.RowIndex].Cells[1].Value.ToString();
+                spEdittxtNama.Text = dgvSupplier.Rows[e.RowIndex].Cells[2].Value.ToString();
+                spEdittxtAlamat.Text = dgvSupplier.Rows[e.RowIndex].Cells[3].Value.ToString();
+                spDeletetxtID.Text = dgvSupplier.Rows[e.RowIndex].Cells[0].Value.ToString();
+                materialTabControl3.SelectedTab = sedit;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Alert");
             }
         }
     }
