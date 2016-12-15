@@ -13,9 +13,85 @@ namespace Latihan_POS
 {
     public partial class MainForm : MaterialForm
     {
+        public bool flag_beditchoose = false;
+        public bool flag_bdeletechoose = false;
+        public bool flag_cseditchoose = false;
+        public bool flag_csdeletechoose = false;
+        public bool flag_speditchoose = false;
+        public bool flag_spdeletechoose = false;
+        
         public MainForm()
         {
             InitializeComponent();
+        }
+        public void connectdbsupplier()
+        {
+            MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero datetime=true");
+            MySqlDataAdapter da;
+            DataSet ds;
+            try
+            {
+                con.Open();
+                ds = new DataSet();
+                da = new MySqlDataAdapter("SELECT * FROM pos_supplier", con);
+                da.Fill(ds, "pos_supplier");
+                dgvSupplier.ReadOnly = true;
+                dgvSupplier.AllowUserToAddRows = false;
+                dgvSupplier.AllowUserToDeleteRows = false;
+                dgvSupplier.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dgvSupplier.DataSource = ds.Tables["pos_supplier"];
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Alert");
+            }
+        }
+        public void connectdbbarang()
+        {
+            MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero Datetime=True");
+            MySqlDataAdapter da;
+            DataSet ds;
+            try
+            {
+                con.Open();
+                ds = new DataSet();
+                da = new MySqlDataAdapter("SELECT * FROM pos_barang", con);
+                da.Fill(ds, "pos_barang");
+                dgvbarang.ReadOnly = true;
+                dgvbarang.AllowUserToAddRows = false;
+                dgvbarang.AllowUserToDeleteRows = false;
+                dgvbarang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dgvbarang.DataSource = ds.Tables["pos_barang"];
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Alert");
+            }
+        }
+        public void connectdbcustomer()
+        {
+            MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero datetime=true");
+            MySqlDataAdapter da;
+            DataSet ds;
+            try
+            {
+                con.Open();
+                ds = new DataSet();
+                da = new MySqlDataAdapter("SELECT * FROM pos_customer", con);
+                da.Fill(ds, "pos_customer");
+                dgvCustomer.ReadOnly = true;
+                dgvCustomer.AllowUserToAddRows = false;
+                dgvCustomer.AllowUserToDeleteRows = false;
+                dgvCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dgvCustomer.DataSource = ds.Tables["pos_customer"];
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Alert");
+            }
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
@@ -87,26 +163,7 @@ namespace Latihan_POS
         {
             if (materialTabControl2.SelectedTab.Name == "cdaftar")
             {
-                MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero datetime=true");
-                MySqlDataAdapter da;
-                DataSet ds;
-                try
-                {
-                    con.Open();
-                    ds = new DataSet();
-                    da = new MySqlDataAdapter("SELECT * FROM pos_customer", con);
-                    da.Fill(ds, "pos_customer");
-                    dgvCustomer.ReadOnly = true;
-                    dgvCustomer.AllowUserToAddRows = false;
-                    dgvCustomer.AllowUserToDeleteRows = false;
-                    dgvCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                    dgvCustomer.DataSource = ds.Tables["pos_customer"];
-                    con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Alert");
-                }
+                connectdbcustomer();
             }
         }
 
@@ -114,26 +171,7 @@ namespace Latihan_POS
         {
             if (materialTabControl4.SelectedTab == bdaftar)
             {
-                MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero Datetime=True");
-                MySqlDataAdapter da;
-                DataSet ds;
-                try
-                {
-                    con.Open();
-                    ds = new DataSet();
-                    da = new MySqlDataAdapter("SELECT * FROM pos_barang", con);
-                    da.Fill(ds, "pos_barang");
-                    dgvbarang.ReadOnly = true;
-                    dgvbarang.AllowUserToAddRows = false;
-                    dgvbarang.AllowUserToDeleteRows = false;
-                    dgvbarang.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                    dgvbarang.DataSource = ds.Tables["pos_barang"];
-                    con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Alert");
-                }
+                connectdbbarang();
             }
         }
 
@@ -172,26 +210,7 @@ namespace Latihan_POS
         {
             if (materialTabControl3.SelectedTab.Name == "sdaftar")
             {
-                MySqlConnection con = new MySqlConnection("Server=localhost;Port=3306;Database=db_pos;Uid=root;password='';Convert zero datetime=true");
-                MySqlDataAdapter da;
-                DataSet ds;
-                try
-                {
-                    con.Open();
-                    ds = new DataSet();
-                    da = new MySqlDataAdapter("SELECT * FROM pos_supplier", con);
-                    da.Fill(ds, "pos_supplier");
-                    dgvSupplier.ReadOnly = true;
-                    dgvSupplier.AllowUserToAddRows = false;
-                    dgvSupplier.AllowUserToDeleteRows = false;
-                    dgvSupplier.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                    dgvSupplier.DataSource = ds.Tables["pos_supplier"];
-                    con.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Alert");
-                }
+                connectdbsupplier();
             }
         }
         private void ebtnOK_Click(object sender, EventArgs e)
@@ -225,6 +244,7 @@ namespace Latihan_POS
 
         private void ebtnReset_Click(object sender, EventArgs e)
         {
+            etxtID.Clear();
             etxtKode.Clear();
             etxtNama.Clear();
             etxtJlhAwal.Clear();
@@ -444,14 +464,23 @@ namespace Latihan_POS
         {
             try
             {
-                etxtID.Text = dgvbarang.Rows[e.RowIndex].Cells[0].Value.ToString();
-                etxtKode.Text = dgvbarang.Rows[e.RowIndex].Cells[1].Value.ToString();
-                etxtNama.Text = dgvbarang.Rows[e.RowIndex].Cells[2].Value.ToString();
-                etxtJlhAwal.Text = dgvbarang.Rows[e.RowIndex].Cells[3].Value.ToString();
-                etxtHPP.Text = dgvbarang.Rows[e.RowIndex].Cells[4].Value.ToString();
-                etxtJual.Text = dgvbarang.Rows[e.RowIndex].Cells[5].Value.ToString();
-                dtxtID.Text = dgvbarang.Rows[e.RowIndex].Cells[0].Value.ToString();
-                materialTabControl4.SelectedTab=bedit;
+                if (flag_beditchoose == true)
+                {
+                    etxtID.Text = dgvbarang.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    etxtKode.Text = dgvbarang.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    etxtNama.Text = dgvbarang.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    etxtJlhAwal.Text = dgvbarang.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    etxtHPP.Text = dgvbarang.Rows[e.RowIndex].Cells[4].Value.ToString();
+                    etxtJual.Text = dgvbarang.Rows[e.RowIndex].Cells[5].Value.ToString();
+                    materialTabControl4.SelectedTab = bedit;
+                    flag_beditchoose = false;
+                }
+                else if (flag_bdeletechoose == true)
+                {
+                    dtxtID.Text = dgvbarang.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    materialTabControl4.SelectedTab = bdelete;
+                    flag_bdeletechoose = false;
+                }
             }
             catch (Exception ex)
             {
@@ -463,12 +492,21 @@ namespace Latihan_POS
         {
             try
             {
-                csEdittxtID.Text = dgvCustomer.Rows[e.RowIndex].Cells[0].Value.ToString();
-                csEdittxtKode.Text = dgvCustomer.Rows[e.RowIndex].Cells[1].Value.ToString();
-                csEdittxtNama.Text = dgvCustomer.Rows[e.RowIndex].Cells[2].Value.ToString();
-                csEdittxtAlamat.Text = dgvCustomer.Rows[e.RowIndex].Cells[3].Value.ToString();
-                csDeletetxtID.Text = dgvCustomer.Rows[e.RowIndex].Cells[0].Value.ToString();
-                materialTabControl2.SelectedTab = cedit;
+                if (flag_cseditchoose == true)
+                {
+                    csEdittxtID.Text = dgvCustomer.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    csEdittxtKode.Text = dgvCustomer.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    csEdittxtNama.Text = dgvCustomer.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    csEdittxtAlamat.Text = dgvCustomer.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    materialTabControl2.SelectedTab = cedit;
+                    flag_cseditchoose = false;
+                }
+                else if (flag_csdeletechoose == true)
+                {
+                    csDeletetxtID.Text = dgvCustomer.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    materialTabControl2.SelectedTab = cdelete;
+                    flag_csdeletechoose = false;
+                }
             }
             catch(Exception ex)
             {
@@ -480,17 +518,67 @@ namespace Latihan_POS
         {
             try
             {
-                spEdittxtID.Text = dgvSupplier.Rows[e.RowIndex].Cells[0].Value.ToString();
-                spEdittxtKode.Text = dgvSupplier.Rows[e.RowIndex].Cells[1].Value.ToString();
-                spEdittxtNama.Text = dgvSupplier.Rows[e.RowIndex].Cells[2].Value.ToString();
-                spEdittxtAlamat.Text = dgvSupplier.Rows[e.RowIndex].Cells[3].Value.ToString();
-                spDeletetxtID.Text = dgvSupplier.Rows[e.RowIndex].Cells[0].Value.ToString();
-                materialTabControl3.SelectedTab = sedit;
+                if (flag_speditchoose == true)
+                {
+                    spEdittxtID.Text = dgvSupplier.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    spEdittxtKode.Text = dgvSupplier.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    spEdittxtNama.Text = dgvSupplier.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    spEdittxtAlamat.Text = dgvSupplier.Rows[e.RowIndex].Cells[3].Value.ToString();
+                    materialTabControl3.SelectedTab = sedit;
+                    flag_speditchoose = false;
+                }
+                else if (flag_spdeletechoose == true)
+                {
+                    spDeletetxtID.Text = dgvSupplier.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    materialTabControl3.SelectedTab = sdelete;
+                    flag_spdeletechoose = false;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Alert");
             }
+        }
+
+        private void bchoose_Click(object sender, EventArgs e)
+        {
+            flag_beditchoose = true;
+            materialTabControl4.SelectedTab = bdaftar;
+            connectdbbarang();
+        }
+        private void bDeleteChoose_Click(object sender, EventArgs e)
+        {
+            flag_bdeletechoose = true;
+            materialTabControl4.SelectedTab = bdaftar;
+            connectdbbarang();
+        }
+
+        private void spDeleteChoose_Click(object sender, EventArgs e)
+        {
+            flag_spdeletechoose = true;
+            materialTabControl3.SelectedTab = sdaftar;
+            connectdbsupplier();
+        }
+
+        private void spEditChoose_Click(object sender, EventArgs e)
+        {
+            flag_speditchoose = true;
+            materialTabControl3.SelectedTab = sdaftar;
+            connectdbsupplier();
+        }
+
+        private void csDeleteChoose_Click(object sender, EventArgs e)
+        {
+            flag_csdeletechoose = true;
+            materialTabControl2.SelectedTab = cdaftar;
+            connectdbcustomer();
+        }
+
+        private void csEditChoose_Click(object sender, EventArgs e)
+        {
+            flag_cseditchoose = true;
+            materialTabControl2.SelectedTab = cdaftar;
+            connectdbcustomer();
         }
     }
 }

@@ -137,6 +137,12 @@
             this.dgvSupplier = new System.Windows.Forms.DataGridView();
             this.materialTabSelector2 = new MaterialSkin.Controls.MaterialTabSelector();
             this.materialTabSelector3 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.bchoose = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.bDeleteChoose = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.csEditChoose = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.csDeleteChoose = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.spEditChoose = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.spDeleteChoose = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialTabControl1.SuspendLayout();
             this.Barang.SuspendLayout();
             this.materialTabControl4.SuspendLayout();
@@ -420,6 +426,7 @@
             this.bedit.Controls.Add(this.etxtKode);
             this.bedit.Controls.Add(this.ebtnCancel);
             this.bedit.Controls.Add(this.ebtnReset);
+            this.bedit.Controls.Add(this.bchoose);
             this.bedit.Controls.Add(this.ebtnOK);
             this.bedit.Controls.Add(this.elblJual);
             this.bedit.Controls.Add(this.elblHPP);
@@ -645,6 +652,7 @@
             // bdelete
             // 
             this.bdelete.BackColor = System.Drawing.Color.White;
+            this.bdelete.Controls.Add(this.bDeleteChoose);
             this.bdelete.Controls.Add(this.materialRaisedButton1);
             this.bdelete.Controls.Add(this.materialRaisedButton2);
             this.bdelete.Controls.Add(this.dbtnOK);
@@ -659,7 +667,7 @@
             // materialRaisedButton1
             // 
             this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(346, 148);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(509, 201);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
@@ -672,7 +680,7 @@
             // materialRaisedButton2
             // 
             this.materialRaisedButton2.Depth = 0;
-            this.materialRaisedButton2.Location = new System.Drawing.Point(244, 148);
+            this.materialRaisedButton2.Location = new System.Drawing.Point(407, 201);
             this.materialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton2.Name = "materialRaisedButton2";
             this.materialRaisedButton2.Primary = true;
@@ -685,7 +693,7 @@
             // dbtnOK
             // 
             this.dbtnOK.Depth = 0;
-            this.dbtnOK.Location = new System.Drawing.Point(130, 148);
+            this.dbtnOK.Location = new System.Drawing.Point(293, 201);
             this.dbtnOK.MouseState = MaterialSkin.MouseState.HOVER;
             this.dbtnOK.Name = "dbtnOK";
             this.dbtnOK.Primary = true;
@@ -699,7 +707,7 @@
             // 
             this.dtxtID.Depth = 0;
             this.dtxtID.Hint = "";
-            this.dtxtID.Location = new System.Drawing.Point(197, 71);
+            this.dtxtID.Location = new System.Drawing.Point(196, 101);
             this.dtxtID.MouseState = MaterialSkin.MouseState.HOVER;
             this.dtxtID.Name = "dtxtID";
             this.dtxtID.PasswordChar = '\0';
@@ -717,7 +725,7 @@
             this.dlblID.Depth = 0;
             this.dlblID.Font = new System.Drawing.Font("Roboto", 11F);
             this.dlblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.dlblID.Location = new System.Drawing.Point(79, 75);
+            this.dlblID.Location = new System.Drawing.Point(78, 105);
             this.dlblID.MouseState = MaterialSkin.MouseState.HOVER;
             this.dlblID.Name = "dlblID";
             this.dlblID.Size = new System.Drawing.Size(23, 19);
@@ -931,6 +939,7 @@
             // cedit
             // 
             this.cedit.BackColor = System.Drawing.Color.White;
+            this.cedit.Controls.Add(this.csEditChoose);
             this.cedit.Controls.Add(this.csEdittxtAlamat);
             this.cedit.Controls.Add(this.csEdittxtNama);
             this.cedit.Controls.Add(this.csEdittxtID);
@@ -1104,6 +1113,7 @@
             // cdelete
             // 
             this.cdelete.BackColor = System.Drawing.Color.White;
+            this.cdelete.Controls.Add(this.csDeleteChoose);
             this.cdelete.Controls.Add(this.csDeletebtnCancel);
             this.cdelete.Controls.Add(this.csDeletebtnReset);
             this.cdelete.Controls.Add(this.csDeletebtnOK);
@@ -1118,7 +1128,7 @@
             // csDeletebtnCancel
             // 
             this.csDeletebtnCancel.Depth = 0;
-            this.csDeletebtnCancel.Location = new System.Drawing.Point(345, 140);
+            this.csDeletebtnCancel.Location = new System.Drawing.Point(514, 191);
             this.csDeletebtnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.csDeletebtnCancel.Name = "csDeletebtnCancel";
             this.csDeletebtnCancel.Primary = true;
@@ -1131,7 +1141,7 @@
             // csDeletebtnReset
             // 
             this.csDeletebtnReset.Depth = 0;
-            this.csDeletebtnReset.Location = new System.Drawing.Point(243, 140);
+            this.csDeletebtnReset.Location = new System.Drawing.Point(412, 191);
             this.csDeletebtnReset.MouseState = MaterialSkin.MouseState.HOVER;
             this.csDeletebtnReset.Name = "csDeletebtnReset";
             this.csDeletebtnReset.Primary = true;
@@ -1144,7 +1154,7 @@
             // csDeletebtnOK
             // 
             this.csDeletebtnOK.Depth = 0;
-            this.csDeletebtnOK.Location = new System.Drawing.Point(129, 140);
+            this.csDeletebtnOK.Location = new System.Drawing.Point(298, 191);
             this.csDeletebtnOK.MouseState = MaterialSkin.MouseState.HOVER;
             this.csDeletebtnOK.Name = "csDeletebtnOK";
             this.csDeletebtnOK.Primary = true;
@@ -1391,6 +1401,7 @@
             // sedit
             // 
             this.sedit.BackColor = System.Drawing.Color.White;
+            this.sedit.Controls.Add(this.spEditChoose);
             this.sedit.Controls.Add(this.spEdittxtAlamat);
             this.sedit.Controls.Add(this.spEdittxtNama);
             this.sedit.Controls.Add(this.spEdittxtID);
@@ -1564,6 +1575,7 @@
             // sdelete
             // 
             this.sdelete.BackColor = System.Drawing.Color.White;
+            this.sdelete.Controls.Add(this.spDeleteChoose);
             this.sdelete.Controls.Add(this.spDeletebtnCancel);
             this.sdelete.Controls.Add(this.spDeletetbtnReset);
             this.sdelete.Controls.Add(this.spDeletebtnOK);
@@ -1578,7 +1590,7 @@
             // spDeletebtnCancel
             // 
             this.spDeletebtnCancel.Depth = 0;
-            this.spDeletebtnCancel.Location = new System.Drawing.Point(338, 142);
+            this.spDeletebtnCancel.Location = new System.Drawing.Point(502, 199);
             this.spDeletebtnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.spDeletebtnCancel.Name = "spDeletebtnCancel";
             this.spDeletebtnCancel.Primary = true;
@@ -1590,7 +1602,7 @@
             // spDeletetbtnReset
             // 
             this.spDeletetbtnReset.Depth = 0;
-            this.spDeletetbtnReset.Location = new System.Drawing.Point(236, 142);
+            this.spDeletetbtnReset.Location = new System.Drawing.Point(400, 199);
             this.spDeletetbtnReset.MouseState = MaterialSkin.MouseState.HOVER;
             this.spDeletetbtnReset.Name = "spDeletetbtnReset";
             this.spDeletetbtnReset.Primary = true;
@@ -1602,7 +1614,7 @@
             // spDeletebtnOK
             // 
             this.spDeletebtnOK.Depth = 0;
-            this.spDeletebtnOK.Location = new System.Drawing.Point(122, 142);
+            this.spDeletebtnOK.Location = new System.Drawing.Point(286, 199);
             this.spDeletebtnOK.MouseState = MaterialSkin.MouseState.HOVER;
             this.spDeletebtnOK.Name = "spDeletebtnOK";
             this.spDeletebtnOK.Primary = true;
@@ -1690,6 +1702,84 @@
             this.materialTabSelector3.Size = new System.Drawing.Size(498, 34);
             this.materialTabSelector3.TabIndex = 1;
             this.materialTabSelector3.Text = "materialTabSelector3";
+            // 
+            // bchoose
+            // 
+            this.bchoose.Depth = 0;
+            this.bchoose.Location = new System.Drawing.Point(21, 201);
+            this.bchoose.MouseState = MaterialSkin.MouseState.HOVER;
+            this.bchoose.Name = "bchoose";
+            this.bchoose.Primary = true;
+            this.bchoose.Size = new System.Drawing.Size(166, 36);
+            this.bchoose.TabIndex = 7;
+            this.bchoose.Text = "Choose from \'Daftar\'";
+            this.bchoose.UseVisualStyleBackColor = true;
+            this.bchoose.Click += new System.EventHandler(this.bchoose_Click);
+            // 
+            // bDeleteChoose
+            // 
+            this.bDeleteChoose.Depth = 0;
+            this.bDeleteChoose.Location = new System.Drawing.Point(6, 201);
+            this.bDeleteChoose.MouseState = MaterialSkin.MouseState.HOVER;
+            this.bDeleteChoose.Name = "bDeleteChoose";
+            this.bDeleteChoose.Primary = true;
+            this.bDeleteChoose.Size = new System.Drawing.Size(166, 36);
+            this.bDeleteChoose.TabIndex = 42;
+            this.bDeleteChoose.Text = "Choose from \'Daftar\'";
+            this.bDeleteChoose.UseVisualStyleBackColor = true;
+            this.bDeleteChoose.Click += new System.EventHandler(this.bDeleteChoose_Click);
+            // 
+            // csEditChoose
+            // 
+            this.csEditChoose.Depth = 0;
+            this.csEditChoose.Location = new System.Drawing.Point(7, 197);
+            this.csEditChoose.MouseState = MaterialSkin.MouseState.HOVER;
+            this.csEditChoose.Name = "csEditChoose";
+            this.csEditChoose.Primary = true;
+            this.csEditChoose.Size = new System.Drawing.Size(166, 36);
+            this.csEditChoose.TabIndex = 57;
+            this.csEditChoose.Text = "Choose from \'Daftar\'";
+            this.csEditChoose.UseVisualStyleBackColor = true;
+            this.csEditChoose.Click += new System.EventHandler(this.csEditChoose_Click);
+            // 
+            // csDeleteChoose
+            // 
+            this.csDeleteChoose.Depth = 0;
+            this.csDeleteChoose.Location = new System.Drawing.Point(7, 191);
+            this.csDeleteChoose.MouseState = MaterialSkin.MouseState.HOVER;
+            this.csDeleteChoose.Name = "csDeleteChoose";
+            this.csDeleteChoose.Primary = true;
+            this.csDeleteChoose.Size = new System.Drawing.Size(166, 36);
+            this.csDeleteChoose.TabIndex = 47;
+            this.csDeleteChoose.Text = "Choose from \'Daftar\'";
+            this.csDeleteChoose.UseVisualStyleBackColor = true;
+            this.csDeleteChoose.Click += new System.EventHandler(this.csDeleteChoose_Click);
+            // 
+            // spEditChoose
+            // 
+            this.spEditChoose.Depth = 0;
+            this.spEditChoose.Location = new System.Drawing.Point(14, 199);
+            this.spEditChoose.MouseState = MaterialSkin.MouseState.HOVER;
+            this.spEditChoose.Name = "spEditChoose";
+            this.spEditChoose.Primary = true;
+            this.spEditChoose.Size = new System.Drawing.Size(166, 36);
+            this.spEditChoose.TabIndex = 68;
+            this.spEditChoose.Text = "Choose from \'Daftar\'";
+            this.spEditChoose.UseVisualStyleBackColor = true;
+            this.spEditChoose.Click += new System.EventHandler(this.spEditChoose_Click);
+            // 
+            // spDeleteChoose
+            // 
+            this.spDeleteChoose.Depth = 0;
+            this.spDeleteChoose.Location = new System.Drawing.Point(13, 199);
+            this.spDeleteChoose.MouseState = MaterialSkin.MouseState.HOVER;
+            this.spDeleteChoose.Name = "spDeleteChoose";
+            this.spDeleteChoose.Primary = true;
+            this.spDeleteChoose.Size = new System.Drawing.Size(166, 36);
+            this.spDeleteChoose.TabIndex = 47;
+            this.spDeleteChoose.Text = "Choose from \'Daftar\'";
+            this.spDeleteChoose.UseVisualStyleBackColor = true;
+            this.spDeleteChoose.Click += new System.EventHandler(this.spDeleteChoose_Click);
             // 
             // MainForm
             // 
@@ -1847,6 +1937,12 @@
         private MaterialSkin.Controls.MaterialRaisedButton spDeletebtnOK;
         private MaterialSkin.Controls.MaterialSingleLineTextField spDeletetxtID;
         private MaterialSkin.Controls.MaterialLabel spDeletelblID;
+        private MaterialSkin.Controls.MaterialRaisedButton bchoose;
+        private MaterialSkin.Controls.MaterialRaisedButton bDeleteChoose;
+        private MaterialSkin.Controls.MaterialRaisedButton csEditChoose;
+        private MaterialSkin.Controls.MaterialRaisedButton csDeleteChoose;
+        private MaterialSkin.Controls.MaterialRaisedButton spEditChoose;
+        private MaterialSkin.Controls.MaterialRaisedButton spDeleteChoose;
 
 
     }
