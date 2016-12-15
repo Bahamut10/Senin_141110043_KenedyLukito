@@ -165,6 +165,11 @@ namespace Latihan_POS
             {
                 connectdbcustomer();
             }
+            else
+            {
+                flag_cseditchoose = false;
+                flag_csdeletechoose = false;
+            }
         }
 
         private void materialTabControl4_SelectedIndexChanged(object sender, EventArgs e)
@@ -172,6 +177,11 @@ namespace Latihan_POS
             if (materialTabControl4.SelectedTab == bdaftar)
             {
                 connectdbbarang();
+            }
+            else 
+            { 
+                flag_beditchoose = false;
+                flag_bdeletechoose = false;
             }
         }
 
@@ -211,6 +221,11 @@ namespace Latihan_POS
             if (materialTabControl3.SelectedTab.Name == "sdaftar")
             {
                 connectdbsupplier();
+            }
+            else
+            {
+                flag_speditchoose = false;
+                flag_spdeletechoose = false;
             }
         }
         private void ebtnOK_Click(object sender, EventArgs e)
