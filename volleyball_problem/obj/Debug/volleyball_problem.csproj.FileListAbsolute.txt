@@ -1,9 +1,8 @@
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\volleyball_problem\bin\Debug\volleyball_problem.exe.config
-D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\volleyball_problem\obj\Debug\volleyball_problem.csprojResolveAssemblyReference.cache
+D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\volleyball_problem\bin\Debug\volleyball_problem.exe
+D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\volleyball_problem\bin\Debug\volleyball_problem.pdb
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\volleyball_problem\obj\Debug\volleyball_problem.Form1.resources
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\volleyball_problem\obj\Debug\volleyball_problem.Properties.Resources.resources
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\volleyball_problem\obj\Debug\volleyball_problem.csproj.GenerateResource.Cache
-D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\volleyball_problem\bin\Debug\volleyball_problem.exe
-D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\volleyball_problem\bin\Debug\volleyball_problem.pdb
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\volleyball_problem\obj\Debug\volleyball_problem.exe
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\volleyball_problem\obj\Debug\volleyball_problem.pdb

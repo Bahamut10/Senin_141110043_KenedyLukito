@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\clsBarang.cs" />
+    <Compile Include="Class\clsCustomer.cs" />
+    <Compile Include="Class\clsDatabase.cs" />
+    <Compile Include="Class\clsPenjualanDetails.cs" />
+    <Compile Include="Class\clsPenjualanMaster.cs" />
+    <Compile Include="Class\clsSupplier.cs" />
     <Compile Include="Daftar Barang.cs">
       <SubType>Form</SubType>
     </Compile>
