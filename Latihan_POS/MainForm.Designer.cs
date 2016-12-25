@@ -173,26 +173,30 @@
             this.transaksi = new System.Windows.Forms.TabPage();
             this.materialTabControl6 = new MaterialSkin.Controls.MaterialTabControl();
             this.pembelian = new System.Windows.Forms.TabPage();
-            this.materialRaisedButton5 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialSingleLineTextField8 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.materialRaisedButton6 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton7 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialRaisedButton8 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialSingleLineTextField9 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField10 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField11 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField12 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField13 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField14 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
+            this.BeliAdd = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.BelitxtTotal = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.BelilblTotal = new MaterialSkin.Controls.MaterialLabel();
+            this.dgvBeli = new System.Windows.Forms.DataGridView();
+            this.BeliReset = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.BeliCancel = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.BeliSearchBarang = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.BeliSearchSupplier = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.BeliSearchKode = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.BelitxtSubtotal = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.BelitxtKuantitas = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.BelitxtHPP = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.BelitxtBarang = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.BelitxtSupplier = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.BelitxtKode = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.BelilblSubtotal = new MaterialSkin.Controls.MaterialLabel();
+            this.BelilblKuantitas = new MaterialSkin.Controls.MaterialLabel();
+            this.BelilblHPP = new MaterialSkin.Controls.MaterialLabel();
+            this.BelilblBarang = new MaterialSkin.Controls.MaterialLabel();
+            this.BelilblSupplier = new MaterialSkin.Controls.MaterialLabel();
+            this.BelilblKode = new MaterialSkin.Controls.MaterialLabel();
             this.penjualan = new System.Windows.Forms.TabPage();
+            this.JualReset = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.JualCancel = new MaterialSkin.Controls.MaterialRaisedButton();
             this.JualAdd = new MaterialSkin.Controls.MaterialRaisedButton();
             this.JualtxtTotalHarga = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.JuallblTotalHarga = new MaterialSkin.Controls.MaterialLabel();
@@ -251,7 +255,7 @@
             this.transaksi.SuspendLayout();
             this.materialTabControl6.SuspendLayout();
             this.pembelian.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBeli)).BeginInit();
             this.penjualan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJual)).BeginInit();
             this.daftartransaksi.SuspendLayout();
@@ -282,11 +286,11 @@
             this.materialTabControl1.Controls.Add(this.regis);
             this.materialTabControl1.Controls.Add(this.transaksi);
             this.materialTabControl1.Depth = 0;
-            this.materialTabControl1.Location = new System.Drawing.Point(1, 63);
+            this.materialTabControl1.Location = new System.Drawing.Point(-4, 63);
             this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(623, 483);
+            this.materialTabControl1.Size = new System.Drawing.Size(635, 480);
             this.materialTabControl1.TabIndex = 3;
             // 
             // regis
@@ -296,7 +300,7 @@
             this.regis.Location = new System.Drawing.Point(4, 22);
             this.regis.Name = "regis";
             this.regis.Padding = new System.Windows.Forms.Padding(3);
-            this.regis.Size = new System.Drawing.Size(615, 457);
+            this.regis.Size = new System.Drawing.Size(627, 454);
             this.regis.TabIndex = 0;
             this.regis.Text = "Registrasi";
             this.regis.UseVisualStyleBackColor = true;
@@ -308,7 +312,7 @@
             this.materialTabSelector3.Location = new System.Drawing.Point(-5, -1);
             this.materialTabSelector3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector3.Name = "materialTabSelector3";
-            this.materialTabSelector3.Size = new System.Drawing.Size(631, 36);
+            this.materialTabSelector3.Size = new System.Drawing.Size(667, 36);
             this.materialTabSelector3.TabIndex = 4;
             this.materialTabSelector3.Text = "materialTabSelector3";
             // 
@@ -326,7 +330,7 @@
             this.materialTabControl2.Name = "materialTabControl2";
             this.materialTabControl2.Padding = new System.Drawing.Point(0, 0);
             this.materialTabControl2.SelectedIndex = 0;
-            this.materialTabControl2.Size = new System.Drawing.Size(619, 427);
+            this.materialTabControl2.Size = new System.Drawing.Size(631, 424);
             this.materialTabControl2.TabIndex = 1;
             // 
             // Barang
@@ -337,7 +341,7 @@
             this.Barang.Location = new System.Drawing.Point(4, 22);
             this.Barang.Name = "Barang";
             this.Barang.Padding = new System.Windows.Forms.Padding(3);
-            this.Barang.Size = new System.Drawing.Size(611, 401);
+            this.Barang.Size = new System.Drawing.Size(623, 398);
             this.Barang.TabIndex = 0;
             this.Barang.Text = "Barang";
             // 
@@ -354,7 +358,7 @@
             this.materialTabControl4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl4.Name = "materialTabControl4";
             this.materialTabControl4.SelectedIndex = 0;
-            this.materialTabControl4.Size = new System.Drawing.Size(610, 382);
+            this.materialTabControl4.Size = new System.Drawing.Size(622, 382);
             this.materialTabControl4.TabIndex = 19;
             this.materialTabControl4.SelectedIndexChanged += new System.EventHandler(this.materialTabControl4_SelectedIndexChanged);
             // 
@@ -377,7 +381,7 @@
             this.binput.Location = new System.Drawing.Point(4, 22);
             this.binput.Name = "binput";
             this.binput.Padding = new System.Windows.Forms.Padding(3);
-            this.binput.Size = new System.Drawing.Size(602, 356);
+            this.binput.Size = new System.Drawing.Size(614, 356);
             this.binput.TabIndex = 0;
             this.binput.Text = "Input";
             // 
@@ -582,7 +586,7 @@
             this.bedit.Location = new System.Drawing.Point(4, 22);
             this.bedit.Name = "bedit";
             this.bedit.Padding = new System.Windows.Forms.Padding(3);
-            this.bedit.Size = new System.Drawing.Size(602, 356);
+            this.bedit.Size = new System.Drawing.Size(614, 356);
             this.bedit.TabIndex = 1;
             this.bedit.Text = "Edit";
             // 
@@ -818,14 +822,14 @@
             this.bdelete.Controls.Add(this.dlblID);
             this.bdelete.Location = new System.Drawing.Point(4, 22);
             this.bdelete.Name = "bdelete";
-            this.bdelete.Size = new System.Drawing.Size(602, 356);
+            this.bdelete.Size = new System.Drawing.Size(614, 356);
             this.bdelete.TabIndex = 2;
             this.bdelete.Text = "Delete";
             // 
             // bDeleteChoose
             // 
             this.bDeleteChoose.Depth = 0;
-            this.bDeleteChoose.Location = new System.Drawing.Point(6, 201);
+            this.bDeleteChoose.Location = new System.Drawing.Point(19, 201);
             this.bDeleteChoose.MouseState = MaterialSkin.MouseState.HOVER;
             this.bDeleteChoose.Name = "bDeleteChoose";
             this.bDeleteChoose.Primary = true;
@@ -908,7 +912,7 @@
             this.bdaftar.Controls.Add(this.dgvbarang);
             this.bdaftar.Location = new System.Drawing.Point(4, 22);
             this.bdaftar.Name = "bdaftar";
-            this.bdaftar.Size = new System.Drawing.Size(602, 356);
+            this.bdaftar.Size = new System.Drawing.Size(614, 356);
             this.bdaftar.TabIndex = 3;
             this.bdaftar.Text = "Daftar";
             this.bdaftar.UseVisualStyleBackColor = true;
@@ -920,7 +924,7 @@
             this.dgvbarang.Location = new System.Drawing.Point(0, 0);
             this.dgvbarang.Name = "dgvbarang";
             this.dgvbarang.RowHeadersVisible = false;
-            this.dgvbarang.Size = new System.Drawing.Size(602, 356);
+            this.dgvbarang.Size = new System.Drawing.Size(614, 356);
             this.dgvbarang.TabIndex = 0;
             this.dgvbarang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvbarang_CellClick);
             // 
@@ -933,7 +937,7 @@
             this.materialTabSelector4.Location = new System.Drawing.Point(-4, 1);
             this.materialTabSelector4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector4.Name = "materialTabSelector4";
-            this.materialTabSelector4.Size = new System.Drawing.Size(619, 23);
+            this.materialTabSelector4.Size = new System.Drawing.Size(662, 23);
             this.materialTabSelector4.TabIndex = 18;
             this.materialTabSelector4.Text = "materialTabSelector4";
             // 
@@ -944,7 +948,7 @@
             this.Customer.Location = new System.Drawing.Point(4, 22);
             this.Customer.Name = "Customer";
             this.Customer.Padding = new System.Windows.Forms.Padding(3);
-            this.Customer.Size = new System.Drawing.Size(611, 401);
+            this.Customer.Size = new System.Drawing.Size(623, 398);
             this.Customer.TabIndex = 1;
             this.Customer.Text = "Customer";
             this.Customer.UseVisualStyleBackColor = true;
@@ -998,7 +1002,7 @@
             this.csInputbtnCancel.Name = "csInputbtnCancel";
             this.csInputbtnCancel.Primary = true;
             this.csInputbtnCancel.Size = new System.Drawing.Size(96, 36);
-            this.csInputbtnCancel.TabIndex = 6;
+            this.csInputbtnCancel.TabIndex = 9;
             this.csInputbtnCancel.Text = "Cancel";
             this.csInputbtnCancel.UseVisualStyleBackColor = true;
             this.csInputbtnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -1011,7 +1015,7 @@
             this.csInputbtnReset.Name = "csInputbtnReset";
             this.csInputbtnReset.Primary = true;
             this.csInputbtnReset.Size = new System.Drawing.Size(96, 36);
-            this.csInputbtnReset.TabIndex = 5;
+            this.csInputbtnReset.TabIndex = 8;
             this.csInputbtnReset.Text = "Reset";
             this.csInputbtnReset.UseVisualStyleBackColor = true;
             this.csInputbtnReset.Click += new System.EventHandler(this.csInputbtnReset_Click);
@@ -1024,7 +1028,7 @@
             this.csInputbtnOK.Name = "csInputbtnOK";
             this.csInputbtnOK.Primary = true;
             this.csInputbtnOK.Size = new System.Drawing.Size(107, 36);
-            this.csInputbtnOK.TabIndex = 4;
+            this.csInputbtnOK.TabIndex = 7;
             this.csInputbtnOK.Text = "OK";
             this.csInputbtnOK.UseVisualStyleBackColor = true;
             this.csInputbtnOK.Click += new System.EventHandler(this.csInputbtnOK_Click);
@@ -1041,7 +1045,7 @@
             this.csInputtxtKodePos.SelectionLength = 0;
             this.csInputtxtKodePos.SelectionStart = 0;
             this.csInputtxtKodePos.Size = new System.Drawing.Size(286, 23);
-            this.csInputtxtKodePos.TabIndex = 3;
+            this.csInputtxtKodePos.TabIndex = 6;
             this.csInputtxtKodePos.UseSystemPasswordChar = false;
             // 
             // csInputtxtTelepon
@@ -1056,7 +1060,7 @@
             this.csInputtxtTelepon.SelectionLength = 0;
             this.csInputtxtTelepon.SelectionStart = 0;
             this.csInputtxtTelepon.Size = new System.Drawing.Size(286, 23);
-            this.csInputtxtTelepon.TabIndex = 3;
+            this.csInputtxtTelepon.TabIndex = 5;
             this.csInputtxtTelepon.UseSystemPasswordChar = false;
             // 
             // csInputtxtEmail
@@ -1071,7 +1075,7 @@
             this.csInputtxtEmail.SelectionLength = 0;
             this.csInputtxtEmail.SelectionStart = 0;
             this.csInputtxtEmail.Size = new System.Drawing.Size(286, 23);
-            this.csInputtxtEmail.TabIndex = 3;
+            this.csInputtxtEmail.TabIndex = 4;
             this.csInputtxtEmail.UseSystemPasswordChar = false;
             // 
             // csInputlblKodePos
@@ -1228,7 +1232,7 @@
             // csEditChoose
             // 
             this.csEditChoose.Depth = 0;
-            this.csEditChoose.Location = new System.Drawing.Point(10, 240);
+            this.csEditChoose.Location = new System.Drawing.Point(18, 240);
             this.csEditChoose.MouseState = MaterialSkin.MouseState.HOVER;
             this.csEditChoose.Name = "csEditChoose";
             this.csEditChoose.Primary = true;
@@ -1492,7 +1496,7 @@
             // csDeleteChoose
             // 
             this.csDeleteChoose.Depth = 0;
-            this.csDeleteChoose.Location = new System.Drawing.Point(7, 191);
+            this.csDeleteChoose.Location = new System.Drawing.Point(23, 191);
             this.csDeleteChoose.MouseState = MaterialSkin.MouseState.HOVER;
             this.csDeleteChoose.Name = "csDeleteChoose";
             this.csDeleteChoose.Primary = true;
@@ -1583,8 +1587,7 @@
             // dgvCustomer
             // 
             this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCustomer.Location = new System.Drawing.Point(0, 0);
+            this.dgvCustomer.Location = new System.Drawing.Point(21, 1);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.RowHeadersVisible = false;
             this.dgvCustomer.Size = new System.Drawing.Size(619, 356);
@@ -1600,7 +1603,7 @@
             this.materialTabSelector1.Location = new System.Drawing.Point(-4, 0);
             this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Size = new System.Drawing.Size(632, 23);
+            this.materialTabSelector1.Size = new System.Drawing.Size(644, 23);
             this.materialTabSelector1.TabIndex = 0;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
@@ -1610,7 +1613,7 @@
             this.Supplier.Controls.Add(this.materialTabSelector2);
             this.Supplier.Location = new System.Drawing.Point(4, 22);
             this.Supplier.Name = "Supplier";
-            this.Supplier.Size = new System.Drawing.Size(611, 401);
+            this.Supplier.Size = new System.Drawing.Size(623, 398);
             this.Supplier.TabIndex = 2;
             this.Supplier.Text = "Supplier";
             this.Supplier.UseVisualStyleBackColor = true;
@@ -1629,7 +1632,7 @@
             this.materialTabControl5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl5.Name = "materialTabControl5";
             this.materialTabControl5.SelectedIndex = 0;
-            this.materialTabControl5.Size = new System.Drawing.Size(605, 436);
+            this.materialTabControl5.Size = new System.Drawing.Size(617, 433);
             this.materialTabControl5.TabIndex = 2;
             this.materialTabControl5.SelectedIndexChanged += new System.EventHandler(this.materialTabControl5_SelectedIndexChanged);
             // 
@@ -1654,7 +1657,7 @@
             this.sinput.Location = new System.Drawing.Point(4, 22);
             this.sinput.Name = "sinput";
             this.sinput.Padding = new System.Windows.Forms.Padding(3);
-            this.sinput.Size = new System.Drawing.Size(597, 410);
+            this.sinput.Size = new System.Drawing.Size(609, 407);
             this.sinput.TabIndex = 0;
             this.sinput.Text = "Input";
             // 
@@ -1670,7 +1673,7 @@
             this.spInputtxtKodePos.SelectionLength = 0;
             this.spInputtxtKodePos.SelectionStart = 0;
             this.spInputtxtKodePos.Size = new System.Drawing.Size(286, 23);
-            this.spInputtxtKodePos.TabIndex = 18;
+            this.spInputtxtKodePos.TabIndex = 6;
             this.spInputtxtKodePos.UseSystemPasswordChar = false;
             // 
             // spInputtxtTelepon
@@ -1685,7 +1688,7 @@
             this.spInputtxtTelepon.SelectionLength = 0;
             this.spInputtxtTelepon.SelectionStart = 0;
             this.spInputtxtTelepon.Size = new System.Drawing.Size(286, 23);
-            this.spInputtxtTelepon.TabIndex = 19;
+            this.spInputtxtTelepon.TabIndex = 5;
             this.spInputtxtTelepon.UseSystemPasswordChar = false;
             // 
             // spInputtxtEmail
@@ -1700,7 +1703,7 @@
             this.spInputtxtEmail.SelectionLength = 0;
             this.spInputtxtEmail.SelectionStart = 0;
             this.spInputtxtEmail.Size = new System.Drawing.Size(286, 23);
-            this.spInputtxtEmail.TabIndex = 20;
+            this.spInputtxtEmail.TabIndex = 4;
             this.spInputtxtEmail.UseSystemPasswordChar = false;
             // 
             // spInputlblKodePos
@@ -1745,12 +1748,12 @@
             // spInputbtnCancel
             // 
             this.spInputbtnCancel.Depth = 0;
-            this.spInputbtnCancel.Location = new System.Drawing.Point(503, 243);
+            this.spInputbtnCancel.Location = new System.Drawing.Point(507, 306);
             this.spInputbtnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.spInputbtnCancel.Name = "spInputbtnCancel";
             this.spInputbtnCancel.Primary = true;
             this.spInputbtnCancel.Size = new System.Drawing.Size(96, 36);
-            this.spInputbtnCancel.TabIndex = 6;
+            this.spInputbtnCancel.TabIndex = 9;
             this.spInputbtnCancel.Text = "Cancel";
             this.spInputbtnCancel.UseVisualStyleBackColor = true;
             this.spInputbtnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -1758,12 +1761,12 @@
             // spInputbtnReset
             // 
             this.spInputbtnReset.Depth = 0;
-            this.spInputbtnReset.Location = new System.Drawing.Point(401, 243);
+            this.spInputbtnReset.Location = new System.Drawing.Point(405, 306);
             this.spInputbtnReset.MouseState = MaterialSkin.MouseState.HOVER;
             this.spInputbtnReset.Name = "spInputbtnReset";
             this.spInputbtnReset.Primary = true;
             this.spInputbtnReset.Size = new System.Drawing.Size(96, 36);
-            this.spInputbtnReset.TabIndex = 5;
+            this.spInputbtnReset.TabIndex = 8;
             this.spInputbtnReset.Text = "Reset";
             this.spInputbtnReset.UseVisualStyleBackColor = true;
             this.spInputbtnReset.Click += new System.EventHandler(this.spInputbtnReset_Click);
@@ -1771,12 +1774,12 @@
             // spInputbtnOK
             // 
             this.spInputbtnOK.Depth = 0;
-            this.spInputbtnOK.Location = new System.Drawing.Point(287, 243);
+            this.spInputbtnOK.Location = new System.Drawing.Point(291, 306);
             this.spInputbtnOK.MouseState = MaterialSkin.MouseState.HOVER;
             this.spInputbtnOK.Name = "spInputbtnOK";
             this.spInputbtnOK.Primary = true;
             this.spInputbtnOK.Size = new System.Drawing.Size(107, 36);
-            this.spInputbtnOK.TabIndex = 4;
+            this.spInputbtnOK.TabIndex = 7;
             this.spInputbtnOK.Text = "OK";
             this.spInputbtnOK.UseVisualStyleBackColor = true;
             this.spInputbtnOK.Click += new System.EventHandler(this.spInputbtnOK_Click);
@@ -1889,7 +1892,7 @@
             this.sedit.Location = new System.Drawing.Point(4, 22);
             this.sedit.Name = "sedit";
             this.sedit.Padding = new System.Windows.Forms.Padding(3);
-            this.sedit.Size = new System.Drawing.Size(597, 410);
+            this.sedit.Size = new System.Drawing.Size(609, 407);
             this.sedit.TabIndex = 1;
             this.sedit.Text = "Edit";
             // 
@@ -1905,7 +1908,7 @@
             this.spEdittxtKodePos.SelectionLength = 0;
             this.spEdittxtKodePos.SelectionStart = 0;
             this.spEdittxtKodePos.Size = new System.Drawing.Size(345, 23);
-            this.spEdittxtKodePos.TabIndex = 71;
+            this.spEdittxtKodePos.TabIndex = 7;
             this.spEdittxtKodePos.UseSystemPasswordChar = false;
             // 
             // spEdittxtTelepon
@@ -1920,7 +1923,7 @@
             this.spEdittxtTelepon.SelectionLength = 0;
             this.spEdittxtTelepon.SelectionStart = 0;
             this.spEdittxtTelepon.Size = new System.Drawing.Size(345, 23);
-            this.spEdittxtTelepon.TabIndex = 72;
+            this.spEdittxtTelepon.TabIndex = 6;
             this.spEdittxtTelepon.UseSystemPasswordChar = false;
             // 
             // spEdittxtEmail
@@ -1935,7 +1938,7 @@
             this.spEdittxtEmail.SelectionLength = 0;
             this.spEdittxtEmail.SelectionStart = 0;
             this.spEdittxtEmail.Size = new System.Drawing.Size(345, 23);
-            this.spEdittxtEmail.TabIndex = 73;
+            this.spEdittxtEmail.TabIndex = 5;
             this.spEdittxtEmail.UseSystemPasswordChar = false;
             // 
             // spEditlblKodePos
@@ -1985,7 +1988,7 @@
             this.spEditChoose.Name = "spEditChoose";
             this.spEditChoose.Primary = true;
             this.spEditChoose.Size = new System.Drawing.Size(166, 36);
-            this.spEditChoose.TabIndex = 5;
+            this.spEditChoose.TabIndex = 8;
             this.spEditChoose.Text = "Choose from \'Daftar\'";
             this.spEditChoose.UseVisualStyleBackColor = true;
             this.spEditChoose.Click += new System.EventHandler(this.spEditChoose_Click);
@@ -2002,7 +2005,7 @@
             this.spEdittxtAlamat.SelectionLength = 0;
             this.spEdittxtAlamat.SelectionStart = 0;
             this.spEdittxtAlamat.Size = new System.Drawing.Size(345, 23);
-            this.spEdittxtAlamat.TabIndex = 5;
+            this.spEdittxtAlamat.TabIndex = 4;
             this.spEdittxtAlamat.UseSystemPasswordChar = false;
             // 
             // spEdittxtNama
@@ -2058,7 +2061,7 @@
             this.spEditbtnCancel.Name = "spEditbtnCancel";
             this.spEditbtnCancel.Primary = true;
             this.spEditbtnCancel.Size = new System.Drawing.Size(96, 36);
-            this.spEditbtnCancel.TabIndex = 8;
+            this.spEditbtnCancel.TabIndex = 11;
             this.spEditbtnCancel.Text = "Cancel";
             this.spEditbtnCancel.UseVisualStyleBackColor = true;
             this.spEditbtnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -2071,7 +2074,7 @@
             this.spEditbtnReset.Name = "spEditbtnReset";
             this.spEditbtnReset.Primary = true;
             this.spEditbtnReset.Size = new System.Drawing.Size(96, 36);
-            this.spEditbtnReset.TabIndex = 7;
+            this.spEditbtnReset.TabIndex = 10;
             this.spEditbtnReset.Text = "Reset";
             this.spEditbtnReset.UseVisualStyleBackColor = true;
             this.spEditbtnReset.Click += new System.EventHandler(this.spEditbtnReset_Click);
@@ -2084,7 +2087,7 @@
             this.spEditbtnOK.Name = "spEditbtnOK";
             this.spEditbtnOK.Primary = true;
             this.spEditbtnOK.Size = new System.Drawing.Size(107, 36);
-            this.spEditbtnOK.TabIndex = 6;
+            this.spEditbtnOK.TabIndex = 9;
             this.spEditbtnOK.Text = "OK";
             this.spEditbtnOK.UseVisualStyleBackColor = true;
             this.spEditbtnOK.Click += new System.EventHandler(this.spEditbtnOK_Click);
@@ -2153,7 +2156,7 @@
             this.sdelete.Controls.Add(this.spDeletelblID);
             this.sdelete.Location = new System.Drawing.Point(4, 22);
             this.sdelete.Name = "sdelete";
-            this.sdelete.Size = new System.Drawing.Size(597, 410);
+            this.sdelete.Size = new System.Drawing.Size(609, 407);
             this.sdelete.TabIndex = 2;
             this.sdelete.Text = "Delete";
             // 
@@ -2243,7 +2246,7 @@
             this.sdaftar.Controls.Add(this.dgvSupplier);
             this.sdaftar.Location = new System.Drawing.Point(4, 22);
             this.sdaftar.Name = "sdaftar";
-            this.sdaftar.Size = new System.Drawing.Size(597, 410);
+            this.sdaftar.Size = new System.Drawing.Size(609, 407);
             this.sdaftar.TabIndex = 3;
             this.sdaftar.Text = "Daftar";
             this.sdaftar.UseVisualStyleBackColor = true;
@@ -2251,11 +2254,10 @@
             // dgvSupplier
             // 
             this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSupplier.Location = new System.Drawing.Point(0, 0);
+            this.dgvSupplier.Location = new System.Drawing.Point(11, 0);
             this.dgvSupplier.Name = "dgvSupplier";
             this.dgvSupplier.RowHeadersVisible = false;
-            this.dgvSupplier.Size = new System.Drawing.Size(597, 410);
+            this.dgvSupplier.Size = new System.Drawing.Size(609, 407);
             this.dgvSupplier.TabIndex = 0;
             this.dgvSupplier.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupplier_CellClick);
             // 
@@ -2268,7 +2270,7 @@
             this.materialTabSelector2.Location = new System.Drawing.Point(-4, 0);
             this.materialTabSelector2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector2.Name = "materialTabSelector2";
-            this.materialTabSelector2.Size = new System.Drawing.Size(619, 23);
+            this.materialTabSelector2.Size = new System.Drawing.Size(631, 23);
             this.materialTabSelector2.TabIndex = 1;
             this.materialTabSelector2.Text = "materialTabSelector2";
             // 
@@ -2279,7 +2281,7 @@
             this.transaksi.Location = new System.Drawing.Point(4, 22);
             this.transaksi.Name = "transaksi";
             this.transaksi.Padding = new System.Windows.Forms.Padding(3);
-            this.transaksi.Size = new System.Drawing.Size(615, 457);
+            this.transaksi.Size = new System.Drawing.Size(627, 454);
             this.transaksi.TabIndex = 1;
             this.transaksi.Text = "Transaksi";
             this.transaksi.UseVisualStyleBackColor = true;
@@ -2294,296 +2296,337 @@
             this.materialTabControl6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl6.Name = "materialTabControl6";
             this.materialTabControl6.SelectedIndex = 0;
-            this.materialTabControl6.Size = new System.Drawing.Size(623, 440);
+            this.materialTabControl6.Size = new System.Drawing.Size(635, 433);
             this.materialTabControl6.TabIndex = 1;
             this.materialTabControl6.SelectedIndexChanged += new System.EventHandler(this.materialTabControl6_SelectedIndexChanged);
             // 
             // pembelian
             // 
             this.pembelian.BackColor = System.Drawing.Color.White;
-            this.pembelian.Controls.Add(this.materialRaisedButton5);
-            this.pembelian.Controls.Add(this.materialSingleLineTextField8);
-            this.pembelian.Controls.Add(this.materialLabel8);
-            this.pembelian.Controls.Add(this.dataGridView2);
-            this.pembelian.Controls.Add(this.materialRaisedButton6);
-            this.pembelian.Controls.Add(this.materialRaisedButton7);
-            this.pembelian.Controls.Add(this.materialRaisedButton8);
-            this.pembelian.Controls.Add(this.materialSingleLineTextField9);
-            this.pembelian.Controls.Add(this.materialSingleLineTextField10);
-            this.pembelian.Controls.Add(this.materialSingleLineTextField11);
-            this.pembelian.Controls.Add(this.materialSingleLineTextField12);
-            this.pembelian.Controls.Add(this.materialSingleLineTextField13);
-            this.pembelian.Controls.Add(this.materialSingleLineTextField14);
-            this.pembelian.Controls.Add(this.materialLabel9);
-            this.pembelian.Controls.Add(this.materialLabel10);
-            this.pembelian.Controls.Add(this.materialLabel11);
-            this.pembelian.Controls.Add(this.materialLabel12);
-            this.pembelian.Controls.Add(this.materialLabel13);
-            this.pembelian.Controls.Add(this.materialLabel14);
+            this.pembelian.Controls.Add(this.BeliAdd);
+            this.pembelian.Controls.Add(this.BelitxtTotal);
+            this.pembelian.Controls.Add(this.BelilblTotal);
+            this.pembelian.Controls.Add(this.dgvBeli);
+            this.pembelian.Controls.Add(this.BeliReset);
+            this.pembelian.Controls.Add(this.BeliCancel);
+            this.pembelian.Controls.Add(this.BeliSearchBarang);
+            this.pembelian.Controls.Add(this.BeliSearchSupplier);
+            this.pembelian.Controls.Add(this.BeliSearchKode);
+            this.pembelian.Controls.Add(this.BelitxtSubtotal);
+            this.pembelian.Controls.Add(this.BelitxtKuantitas);
+            this.pembelian.Controls.Add(this.BelitxtHPP);
+            this.pembelian.Controls.Add(this.BelitxtBarang);
+            this.pembelian.Controls.Add(this.BelitxtSupplier);
+            this.pembelian.Controls.Add(this.BelitxtKode);
+            this.pembelian.Controls.Add(this.BelilblSubtotal);
+            this.pembelian.Controls.Add(this.BelilblKuantitas);
+            this.pembelian.Controls.Add(this.BelilblHPP);
+            this.pembelian.Controls.Add(this.BelilblBarang);
+            this.pembelian.Controls.Add(this.BelilblSupplier);
+            this.pembelian.Controls.Add(this.BelilblKode);
             this.pembelian.Location = new System.Drawing.Point(4, 22);
             this.pembelian.Name = "pembelian";
             this.pembelian.Padding = new System.Windows.Forms.Padding(3);
-            this.pembelian.Size = new System.Drawing.Size(615, 414);
+            this.pembelian.Size = new System.Drawing.Size(627, 407);
             this.pembelian.TabIndex = 0;
             this.pembelian.Text = "Pembelian";
             // 
-            // materialRaisedButton5
+            // BeliAdd
             // 
-            this.materialRaisedButton5.Depth = 0;
-            this.materialRaisedButton5.Location = new System.Drawing.Point(494, 136);
-            this.materialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton5.Name = "materialRaisedButton5";
-            this.materialRaisedButton5.Primary = true;
-            this.materialRaisedButton5.Size = new System.Drawing.Size(111, 52);
-            this.materialRaisedButton5.TabIndex = 25;
-            this.materialRaisedButton5.Text = "Add";
-            this.materialRaisedButton5.UseVisualStyleBackColor = true;
+            this.BeliAdd.Depth = 0;
+            this.BeliAdd.Location = new System.Drawing.Point(494, 136);
+            this.BeliAdd.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BeliAdd.Name = "BeliAdd";
+            this.BeliAdd.Primary = true;
+            this.BeliAdd.Size = new System.Drawing.Size(111, 52);
+            this.BeliAdd.TabIndex = 12;
+            this.BeliAdd.Text = "Add";
+            this.BeliAdd.UseVisualStyleBackColor = true;
+            this.BeliAdd.Click += new System.EventHandler(this.BeliAdd_Click);
             // 
-            // materialSingleLineTextField8
+            // BelitxtTotal
             // 
-            this.materialSingleLineTextField8.Depth = 0;
-            this.materialSingleLineTextField8.Hint = "";
-            this.materialSingleLineTextField8.Location = new System.Drawing.Point(329, 375);
-            this.materialSingleLineTextField8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField8.Name = "materialSingleLineTextField8";
-            this.materialSingleLineTextField8.PasswordChar = '\0';
-            this.materialSingleLineTextField8.SelectedText = "";
-            this.materialSingleLineTextField8.SelectionLength = 0;
-            this.materialSingleLineTextField8.SelectionStart = 0;
-            this.materialSingleLineTextField8.Size = new System.Drawing.Size(276, 23);
-            this.materialSingleLineTextField8.TabIndex = 24;
-            this.materialSingleLineTextField8.UseSystemPasswordChar = false;
+            this.BelitxtTotal.Depth = 0;
+            this.BelitxtTotal.Enabled = false;
+            this.BelitxtTotal.Hint = "";
+            this.BelitxtTotal.Location = new System.Drawing.Point(329, 375);
+            this.BelitxtTotal.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BelitxtTotal.Name = "BelitxtTotal";
+            this.BelitxtTotal.PasswordChar = '\0';
+            this.BelitxtTotal.SelectedText = "";
+            this.BelitxtTotal.SelectionLength = 0;
+            this.BelitxtTotal.SelectionStart = 0;
+            this.BelitxtTotal.Size = new System.Drawing.Size(276, 23);
+            this.BelitxtTotal.TabIndex = 24;
+            this.BelitxtTotal.Text = "0.00";
+            this.BelitxtTotal.UseSystemPasswordChar = false;
             // 
-            // materialLabel8
+            // BelilblTotal
             // 
-            this.materialLabel8.AutoSize = true;
-            this.materialLabel8.Depth = 0;
-            this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel8.Location = new System.Drawing.Point(219, 378);
-            this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(100, 19);
-            this.materialLabel8.TabIndex = 23;
-            this.materialLabel8.Text = "Total Harga : ";
+            this.BelilblTotal.AutoSize = true;
+            this.BelilblTotal.Depth = 0;
+            this.BelilblTotal.Font = new System.Drawing.Font("Roboto", 11F);
+            this.BelilblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BelilblTotal.Location = new System.Drawing.Point(219, 378);
+            this.BelilblTotal.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BelilblTotal.Name = "BelilblTotal";
+            this.BelilblTotal.Size = new System.Drawing.Size(100, 19);
+            this.BelilblTotal.TabIndex = 23;
+            this.BelilblTotal.Text = "Total Harga : ";
             // 
-            // dataGridView2
+            // dgvBeli
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(10, 196);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(599, 173);
-            this.dataGridView2.TabIndex = 22;
+            this.dgvBeli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBeli.Location = new System.Drawing.Point(10, 196);
+            this.dgvBeli.Name = "dgvBeli";
+            this.dgvBeli.Size = new System.Drawing.Size(599, 173);
+            this.dgvBeli.TabIndex = 22;
             // 
-            // materialRaisedButton6
+            // BeliReset
             // 
-            this.materialRaisedButton6.Depth = 0;
-            this.materialRaisedButton6.Location = new System.Drawing.Point(392, 73);
-            this.materialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton6.Name = "materialRaisedButton6";
-            this.materialRaisedButton6.Primary = true;
-            this.materialRaisedButton6.Size = new System.Drawing.Size(91, 23);
-            this.materialRaisedButton6.TabIndex = 21;
-            this.materialRaisedButton6.Text = "Search";
-            this.materialRaisedButton6.UseVisualStyleBackColor = true;
+            this.BeliReset.Depth = 0;
+            this.BeliReset.Location = new System.Drawing.Point(494, 45);
+            this.BeliReset.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BeliReset.Name = "BeliReset";
+            this.BeliReset.Primary = true;
+            this.BeliReset.Size = new System.Drawing.Size(111, 23);
+            this.BeliReset.TabIndex = 11;
+            this.BeliReset.Text = "Reset";
+            this.BeliReset.UseVisualStyleBackColor = true;
+            this.BeliReset.Click += new System.EventHandler(this.BeliReset_Click);
             // 
-            // materialRaisedButton7
+            // BeliCancel
             // 
-            this.materialRaisedButton7.Depth = 0;
-            this.materialRaisedButton7.Location = new System.Drawing.Point(392, 45);
-            this.materialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton7.Name = "materialRaisedButton7";
-            this.materialRaisedButton7.Primary = true;
-            this.materialRaisedButton7.Size = new System.Drawing.Size(91, 23);
-            this.materialRaisedButton7.TabIndex = 20;
-            this.materialRaisedButton7.Text = "Search";
-            this.materialRaisedButton7.UseVisualStyleBackColor = true;
+            this.BeliCancel.Depth = 0;
+            this.BeliCancel.Location = new System.Drawing.Point(494, 16);
+            this.BeliCancel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BeliCancel.Name = "BeliCancel";
+            this.BeliCancel.Primary = true;
+            this.BeliCancel.Size = new System.Drawing.Size(111, 23);
+            this.BeliCancel.TabIndex = 10;
+            this.BeliCancel.Text = "Cancel";
+            this.BeliCancel.UseVisualStyleBackColor = true;
+            this.BeliCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // materialRaisedButton8
+            // BeliSearchBarang
             // 
-            this.materialRaisedButton8.Depth = 0;
-            this.materialRaisedButton8.Location = new System.Drawing.Point(392, 16);
-            this.materialRaisedButton8.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton8.Name = "materialRaisedButton8";
-            this.materialRaisedButton8.Primary = true;
-            this.materialRaisedButton8.Size = new System.Drawing.Size(91, 23);
-            this.materialRaisedButton8.TabIndex = 19;
-            this.materialRaisedButton8.Text = "Search";
-            this.materialRaisedButton8.UseVisualStyleBackColor = true;
+            this.BeliSearchBarang.Depth = 0;
+            this.BeliSearchBarang.Location = new System.Drawing.Point(392, 73);
+            this.BeliSearchBarang.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BeliSearchBarang.Name = "BeliSearchBarang";
+            this.BeliSearchBarang.Primary = true;
+            this.BeliSearchBarang.Size = new System.Drawing.Size(91, 23);
+            this.BeliSearchBarang.TabIndex = 9;
+            this.BeliSearchBarang.Text = "Search";
+            this.BeliSearchBarang.UseVisualStyleBackColor = true;
+            this.BeliSearchBarang.Click += new System.EventHandler(this.BeliSearchBarang_Click);
             // 
-            // materialSingleLineTextField9
+            // BeliSearchSupplier
             // 
-            this.materialSingleLineTextField9.Depth = 0;
-            this.materialSingleLineTextField9.Hint = "";
-            this.materialSingleLineTextField9.Location = new System.Drawing.Point(145, 165);
-            this.materialSingleLineTextField9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField9.Name = "materialSingleLineTextField9";
-            this.materialSingleLineTextField9.PasswordChar = '\0';
-            this.materialSingleLineTextField9.SelectedText = "";
-            this.materialSingleLineTextField9.SelectionLength = 0;
-            this.materialSingleLineTextField9.SelectionStart = 0;
-            this.materialSingleLineTextField9.Size = new System.Drawing.Size(232, 23);
-            this.materialSingleLineTextField9.TabIndex = 17;
-            this.materialSingleLineTextField9.UseSystemPasswordChar = false;
+            this.BeliSearchSupplier.Depth = 0;
+            this.BeliSearchSupplier.Location = new System.Drawing.Point(392, 45);
+            this.BeliSearchSupplier.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BeliSearchSupplier.Name = "BeliSearchSupplier";
+            this.BeliSearchSupplier.Primary = true;
+            this.BeliSearchSupplier.Size = new System.Drawing.Size(91, 23);
+            this.BeliSearchSupplier.TabIndex = 8;
+            this.BeliSearchSupplier.Text = "Search";
+            this.BeliSearchSupplier.UseVisualStyleBackColor = true;
+            this.BeliSearchSupplier.Click += new System.EventHandler(this.BeliSearchSupplier_Click);
             // 
-            // materialSingleLineTextField10
+            // BeliSearchKode
             // 
-            this.materialSingleLineTextField10.Depth = 0;
-            this.materialSingleLineTextField10.Hint = "";
-            this.materialSingleLineTextField10.Location = new System.Drawing.Point(145, 136);
-            this.materialSingleLineTextField10.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField10.Name = "materialSingleLineTextField10";
-            this.materialSingleLineTextField10.PasswordChar = '\0';
-            this.materialSingleLineTextField10.SelectedText = "";
-            this.materialSingleLineTextField10.SelectionLength = 0;
-            this.materialSingleLineTextField10.SelectionStart = 0;
-            this.materialSingleLineTextField10.Size = new System.Drawing.Size(232, 23);
-            this.materialSingleLineTextField10.TabIndex = 18;
-            this.materialSingleLineTextField10.UseSystemPasswordChar = false;
+            this.BeliSearchKode.Depth = 0;
+            this.BeliSearchKode.Location = new System.Drawing.Point(392, 16);
+            this.BeliSearchKode.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BeliSearchKode.Name = "BeliSearchKode";
+            this.BeliSearchKode.Primary = true;
+            this.BeliSearchKode.Size = new System.Drawing.Size(91, 23);
+            this.BeliSearchKode.TabIndex = 7;
+            this.BeliSearchKode.Text = "Search";
+            this.BeliSearchKode.UseVisualStyleBackColor = true;
+            this.BeliSearchKode.Click += new System.EventHandler(this.BeliSearchKode_Click);
             // 
-            // materialSingleLineTextField11
+            // BelitxtSubtotal
             // 
-            this.materialSingleLineTextField11.Depth = 0;
-            this.materialSingleLineTextField11.Hint = "";
-            this.materialSingleLineTextField11.Location = new System.Drawing.Point(145, 104);
-            this.materialSingleLineTextField11.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField11.Name = "materialSingleLineTextField11";
-            this.materialSingleLineTextField11.PasswordChar = '\0';
-            this.materialSingleLineTextField11.SelectedText = "";
-            this.materialSingleLineTextField11.SelectionLength = 0;
-            this.materialSingleLineTextField11.SelectionStart = 0;
-            this.materialSingleLineTextField11.Size = new System.Drawing.Size(232, 23);
-            this.materialSingleLineTextField11.TabIndex = 16;
-            this.materialSingleLineTextField11.UseSystemPasswordChar = false;
+            this.BelitxtSubtotal.Depth = 0;
+            this.BelitxtSubtotal.Enabled = false;
+            this.BelitxtSubtotal.Hint = "";
+            this.BelitxtSubtotal.Location = new System.Drawing.Point(145, 165);
+            this.BelitxtSubtotal.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BelitxtSubtotal.Name = "BelitxtSubtotal";
+            this.BelitxtSubtotal.PasswordChar = '\0';
+            this.BelitxtSubtotal.SelectedText = "";
+            this.BelitxtSubtotal.SelectionLength = 0;
+            this.BelitxtSubtotal.SelectionStart = 0;
+            this.BelitxtSubtotal.Size = new System.Drawing.Size(232, 23);
+            this.BelitxtSubtotal.TabIndex = 6;
+            this.BelitxtSubtotal.Text = "0.00";
+            this.BelitxtSubtotal.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField12
+            // BelitxtKuantitas
             // 
-            this.materialSingleLineTextField12.Depth = 0;
-            this.materialSingleLineTextField12.Hint = "";
-            this.materialSingleLineTextField12.Location = new System.Drawing.Point(145, 73);
-            this.materialSingleLineTextField12.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField12.Name = "materialSingleLineTextField12";
-            this.materialSingleLineTextField12.PasswordChar = '\0';
-            this.materialSingleLineTextField12.SelectedText = "";
-            this.materialSingleLineTextField12.SelectionLength = 0;
-            this.materialSingleLineTextField12.SelectionStart = 0;
-            this.materialSingleLineTextField12.Size = new System.Drawing.Size(232, 23);
-            this.materialSingleLineTextField12.TabIndex = 15;
-            this.materialSingleLineTextField12.UseSystemPasswordChar = false;
+            this.BelitxtKuantitas.Depth = 0;
+            this.BelitxtKuantitas.Hint = "";
+            this.BelitxtKuantitas.Location = new System.Drawing.Point(145, 136);
+            this.BelitxtKuantitas.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BelitxtKuantitas.Name = "BelitxtKuantitas";
+            this.BelitxtKuantitas.PasswordChar = '\0';
+            this.BelitxtKuantitas.SelectedText = "";
+            this.BelitxtKuantitas.SelectionLength = 0;
+            this.BelitxtKuantitas.SelectionStart = 0;
+            this.BelitxtKuantitas.Size = new System.Drawing.Size(232, 23);
+            this.BelitxtKuantitas.TabIndex = 5;
+            this.BelitxtKuantitas.UseSystemPasswordChar = false;
+            this.BelitxtKuantitas.TextChanged += new System.EventHandler(this.BelitxtKuantitas_TextChanged);
             // 
-            // materialSingleLineTextField13
+            // BelitxtHPP
             // 
-            this.materialSingleLineTextField13.Depth = 0;
-            this.materialSingleLineTextField13.Enabled = false;
-            this.materialSingleLineTextField13.Hint = "";
-            this.materialSingleLineTextField13.Location = new System.Drawing.Point(145, 41);
-            this.materialSingleLineTextField13.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField13.Name = "materialSingleLineTextField13";
-            this.materialSingleLineTextField13.PasswordChar = '\0';
-            this.materialSingleLineTextField13.SelectedText = "";
-            this.materialSingleLineTextField13.SelectionLength = 0;
-            this.materialSingleLineTextField13.SelectionStart = 0;
-            this.materialSingleLineTextField13.Size = new System.Drawing.Size(232, 23);
-            this.materialSingleLineTextField13.TabIndex = 14;
-            this.materialSingleLineTextField13.Text = "Supplier is filled Automatically";
-            this.materialSingleLineTextField13.UseSystemPasswordChar = false;
+            this.BelitxtHPP.Depth = 0;
+            this.BelitxtHPP.Hint = "";
+            this.BelitxtHPP.Location = new System.Drawing.Point(145, 104);
+            this.BelitxtHPP.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BelitxtHPP.Name = "BelitxtHPP";
+            this.BelitxtHPP.PasswordChar = '\0';
+            this.BelitxtHPP.SelectedText = "";
+            this.BelitxtHPP.SelectionLength = 0;
+            this.BelitxtHPP.SelectionStart = 0;
+            this.BelitxtHPP.Size = new System.Drawing.Size(232, 23);
+            this.BelitxtHPP.TabIndex = 4;
+            this.BelitxtHPP.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField14
+            // BelitxtBarang
             // 
-            this.materialSingleLineTextField14.Depth = 0;
-            this.materialSingleLineTextField14.Hint = "";
-            this.materialSingleLineTextField14.Location = new System.Drawing.Point(145, 12);
-            this.materialSingleLineTextField14.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField14.Name = "materialSingleLineTextField14";
-            this.materialSingleLineTextField14.PasswordChar = '\0';
-            this.materialSingleLineTextField14.SelectedText = "";
-            this.materialSingleLineTextField14.SelectionLength = 0;
-            this.materialSingleLineTextField14.SelectionStart = 0;
-            this.materialSingleLineTextField14.Size = new System.Drawing.Size(232, 23);
-            this.materialSingleLineTextField14.TabIndex = 13;
-            this.materialSingleLineTextField14.UseSystemPasswordChar = false;
+            this.BelitxtBarang.Depth = 0;
+            this.BelitxtBarang.Enabled = false;
+            this.BelitxtBarang.Hint = "";
+            this.BelitxtBarang.Location = new System.Drawing.Point(145, 73);
+            this.BelitxtBarang.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BelitxtBarang.Name = "BelitxtBarang";
+            this.BelitxtBarang.PasswordChar = '\0';
+            this.BelitxtBarang.SelectedText = "";
+            this.BelitxtBarang.SelectionLength = 0;
+            this.BelitxtBarang.SelectionStart = 0;
+            this.BelitxtBarang.Size = new System.Drawing.Size(232, 23);
+            this.BelitxtBarang.TabIndex = 3;
+            this.BelitxtBarang.Text = "Click Search";
+            this.BelitxtBarang.UseSystemPasswordChar = false;
             // 
-            // materialLabel9
+            // BelitxtSupplier
             // 
-            this.materialLabel9.AutoSize = true;
-            this.materialLabel9.Depth = 0;
-            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel9.Location = new System.Drawing.Point(11, 169);
-            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel9.Name = "materialLabel9";
-            this.materialLabel9.Size = new System.Drawing.Size(109, 19);
-            this.materialLabel9.TabIndex = 11;
-            this.materialLabel9.Text = "Subtotal Harga";
+            this.BelitxtSupplier.Depth = 0;
+            this.BelitxtSupplier.Enabled = false;
+            this.BelitxtSupplier.Hint = "";
+            this.BelitxtSupplier.Location = new System.Drawing.Point(145, 41);
+            this.BelitxtSupplier.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BelitxtSupplier.Name = "BelitxtSupplier";
+            this.BelitxtSupplier.PasswordChar = '\0';
+            this.BelitxtSupplier.SelectedText = "";
+            this.BelitxtSupplier.SelectionLength = 0;
+            this.BelitxtSupplier.SelectionStart = 0;
+            this.BelitxtSupplier.Size = new System.Drawing.Size(232, 23);
+            this.BelitxtSupplier.TabIndex = 2;
+            this.BelitxtSupplier.Text = "Click Search";
+            this.BelitxtSupplier.UseSystemPasswordChar = false;
             // 
-            // materialLabel10
+            // BelitxtKode
             // 
-            this.materialLabel10.AutoSize = true;
-            this.materialLabel10.Depth = 0;
-            this.materialLabel10.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel10.Location = new System.Drawing.Point(11, 140);
-            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel10.Name = "materialLabel10";
-            this.materialLabel10.Size = new System.Drawing.Size(72, 19);
-            this.materialLabel10.TabIndex = 10;
-            this.materialLabel10.Text = "Kuantitas";
+            this.BelitxtKode.Depth = 0;
+            this.BelitxtKode.Hint = "";
+            this.BelitxtKode.Location = new System.Drawing.Point(145, 12);
+            this.BelitxtKode.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BelitxtKode.Name = "BelitxtKode";
+            this.BelitxtKode.PasswordChar = '\0';
+            this.BelitxtKode.SelectedText = "";
+            this.BelitxtKode.SelectionLength = 0;
+            this.BelitxtKode.SelectionStart = 0;
+            this.BelitxtKode.Size = new System.Drawing.Size(232, 23);
+            this.BelitxtKode.TabIndex = 1;
+            this.BelitxtKode.UseSystemPasswordChar = false;
             // 
-            // materialLabel11
+            // BelilblSubtotal
             // 
-            this.materialLabel11.AutoSize = true;
-            this.materialLabel11.Depth = 0;
-            this.materialLabel11.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel11.Location = new System.Drawing.Point(11, 108);
-            this.materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel11.Name = "materialLabel11";
-            this.materialLabel11.Size = new System.Drawing.Size(99, 19);
-            this.materialLabel11.TabIndex = 9;
-            this.materialLabel11.Text = "Harga Barang";
+            this.BelilblSubtotal.AutoSize = true;
+            this.BelilblSubtotal.Depth = 0;
+            this.BelilblSubtotal.Font = new System.Drawing.Font("Roboto", 11F);
+            this.BelilblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BelilblSubtotal.Location = new System.Drawing.Point(11, 169);
+            this.BelilblSubtotal.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BelilblSubtotal.Name = "BelilblSubtotal";
+            this.BelilblSubtotal.Size = new System.Drawing.Size(109, 19);
+            this.BelilblSubtotal.TabIndex = 11;
+            this.BelilblSubtotal.Text = "Subtotal Harga";
             // 
-            // materialLabel12
+            // BelilblKuantitas
             // 
-            this.materialLabel12.AutoSize = true;
-            this.materialLabel12.Depth = 0;
-            this.materialLabel12.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel12.Location = new System.Drawing.Point(11, 77);
-            this.materialLabel12.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel12.Name = "materialLabel12";
-            this.materialLabel12.Size = new System.Drawing.Size(55, 19);
-            this.materialLabel12.TabIndex = 8;
-            this.materialLabel12.Text = "Barang";
+            this.BelilblKuantitas.AutoSize = true;
+            this.BelilblKuantitas.Depth = 0;
+            this.BelilblKuantitas.Font = new System.Drawing.Font("Roboto", 11F);
+            this.BelilblKuantitas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BelilblKuantitas.Location = new System.Drawing.Point(11, 140);
+            this.BelilblKuantitas.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BelilblKuantitas.Name = "BelilblKuantitas";
+            this.BelilblKuantitas.Size = new System.Drawing.Size(72, 19);
+            this.BelilblKuantitas.TabIndex = 10;
+            this.BelilblKuantitas.Text = "Kuantitas";
             // 
-            // materialLabel13
+            // BelilblHPP
             // 
-            this.materialLabel13.AutoSize = true;
-            this.materialLabel13.Depth = 0;
-            this.materialLabel13.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel13.Location = new System.Drawing.Point(11, 46);
-            this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel13.Name = "materialLabel13";
-            this.materialLabel13.Size = new System.Drawing.Size(63, 19);
-            this.materialLabel13.TabIndex = 12;
-            this.materialLabel13.Text = "Supplier";
+            this.BelilblHPP.AutoSize = true;
+            this.BelilblHPP.Depth = 0;
+            this.BelilblHPP.Font = new System.Drawing.Font("Roboto", 11F);
+            this.BelilblHPP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BelilblHPP.Location = new System.Drawing.Point(11, 108);
+            this.BelilblHPP.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BelilblHPP.Name = "BelilblHPP";
+            this.BelilblHPP.Size = new System.Drawing.Size(99, 19);
+            this.BelilblHPP.TabIndex = 9;
+            this.BelilblHPP.Text = "Harga Barang";
             // 
-            // materialLabel14
+            // BelilblBarang
             // 
-            this.materialLabel14.AutoSize = true;
-            this.materialLabel14.Depth = 0;
-            this.materialLabel14.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel14.Location = new System.Drawing.Point(11, 16);
-            this.materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel14.Name = "materialLabel14";
-            this.materialLabel14.Size = new System.Drawing.Size(43, 19);
-            this.materialLabel14.TabIndex = 7;
-            this.materialLabel14.Text = "Kode";
+            this.BelilblBarang.AutoSize = true;
+            this.BelilblBarang.Depth = 0;
+            this.BelilblBarang.Font = new System.Drawing.Font("Roboto", 11F);
+            this.BelilblBarang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BelilblBarang.Location = new System.Drawing.Point(11, 77);
+            this.BelilblBarang.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BelilblBarang.Name = "BelilblBarang";
+            this.BelilblBarang.Size = new System.Drawing.Size(55, 19);
+            this.BelilblBarang.TabIndex = 8;
+            this.BelilblBarang.Text = "Barang";
+            // 
+            // BelilblSupplier
+            // 
+            this.BelilblSupplier.AutoSize = true;
+            this.BelilblSupplier.Depth = 0;
+            this.BelilblSupplier.Font = new System.Drawing.Font("Roboto", 11F);
+            this.BelilblSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BelilblSupplier.Location = new System.Drawing.Point(11, 46);
+            this.BelilblSupplier.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BelilblSupplier.Name = "BelilblSupplier";
+            this.BelilblSupplier.Size = new System.Drawing.Size(63, 19);
+            this.BelilblSupplier.TabIndex = 12;
+            this.BelilblSupplier.Text = "Supplier";
+            // 
+            // BelilblKode
+            // 
+            this.BelilblKode.AutoSize = true;
+            this.BelilblKode.Depth = 0;
+            this.BelilblKode.Font = new System.Drawing.Font("Roboto", 11F);
+            this.BelilblKode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BelilblKode.Location = new System.Drawing.Point(11, 16);
+            this.BelilblKode.MouseState = MaterialSkin.MouseState.HOVER;
+            this.BelilblKode.Name = "BelilblKode";
+            this.BelilblKode.Size = new System.Drawing.Size(43, 19);
+            this.BelilblKode.TabIndex = 7;
+            this.BelilblKode.Text = "Kode";
             // 
             // penjualan
             // 
             this.penjualan.BackColor = System.Drawing.Color.White;
+            this.penjualan.Controls.Add(this.JualReset);
+            this.penjualan.Controls.Add(this.JualCancel);
             this.penjualan.Controls.Add(this.JualAdd);
             this.penjualan.Controls.Add(this.JualtxtTotalHarga);
             this.penjualan.Controls.Add(this.JuallblTotalHarga);
@@ -2606,9 +2649,35 @@
             this.penjualan.Location = new System.Drawing.Point(4, 22);
             this.penjualan.Name = "penjualan";
             this.penjualan.Padding = new System.Windows.Forms.Padding(3);
-            this.penjualan.Size = new System.Drawing.Size(615, 414);
+            this.penjualan.Size = new System.Drawing.Size(627, 407);
             this.penjualan.TabIndex = 1;
             this.penjualan.Text = "Penjualan";
+            // 
+            // JualReset
+            // 
+            this.JualReset.Depth = 0;
+            this.JualReset.Location = new System.Drawing.Point(494, 40);
+            this.JualReset.MouseState = MaterialSkin.MouseState.HOVER;
+            this.JualReset.Name = "JualReset";
+            this.JualReset.Primary = true;
+            this.JualReset.Size = new System.Drawing.Size(111, 23);
+            this.JualReset.TabIndex = 11;
+            this.JualReset.Text = "Reset";
+            this.JualReset.UseVisualStyleBackColor = true;
+            this.JualReset.Click += new System.EventHandler(this.JualReset_Click);
+            // 
+            // JualCancel
+            // 
+            this.JualCancel.Depth = 0;
+            this.JualCancel.Location = new System.Drawing.Point(494, 11);
+            this.JualCancel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.JualCancel.Name = "JualCancel";
+            this.JualCancel.Primary = true;
+            this.JualCancel.Size = new System.Drawing.Size(111, 23);
+            this.JualCancel.TabIndex = 10;
+            this.JualCancel.Text = "Cancel";
+            this.JualCancel.UseVisualStyleBackColor = true;
+            this.JualCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // JualAdd
             // 
@@ -2618,7 +2687,7 @@
             this.JualAdd.Name = "JualAdd";
             this.JualAdd.Primary = true;
             this.JualAdd.Size = new System.Drawing.Size(111, 52);
-            this.JualAdd.TabIndex = 6;
+            this.JualAdd.TabIndex = 12;
             this.JualAdd.Text = "Add";
             this.JualAdd.UseVisualStyleBackColor = true;
             this.JualAdd.Click += new System.EventHandler(this.JualAdd_Click);
@@ -2626,6 +2695,7 @@
             // JualtxtTotalHarga
             // 
             this.JualtxtTotalHarga.Depth = 0;
+            this.JualtxtTotalHarga.Enabled = false;
             this.JualtxtTotalHarga.Hint = "";
             this.JualtxtTotalHarga.Location = new System.Drawing.Point(329, 374);
             this.JualtxtTotalHarga.MouseState = MaterialSkin.MouseState.HOVER;
@@ -2636,6 +2706,7 @@
             this.JualtxtTotalHarga.SelectionStart = 0;
             this.JualtxtTotalHarga.Size = new System.Drawing.Size(276, 23);
             this.JualtxtTotalHarga.TabIndex = 5;
+            this.JualtxtTotalHarga.Text = "0.00";
             this.JualtxtTotalHarga.UseSystemPasswordChar = false;
             // 
             // JuallblTotalHarga
@@ -2671,7 +2742,7 @@
             this.JualBarangSearch.Name = "JualBarangSearch";
             this.JualBarangSearch.Primary = true;
             this.JualBarangSearch.Size = new System.Drawing.Size(91, 23);
-            this.JualBarangSearch.TabIndex = 2;
+            this.JualBarangSearch.TabIndex = 9;
             this.JualBarangSearch.Text = "Search";
             this.JualBarangSearch.UseVisualStyleBackColor = true;
             this.JualBarangSearch.Click += new System.EventHandler(this.JualBarangSearch_Click);
@@ -2684,7 +2755,7 @@
             this.JualCustSearch.Name = "JualCustSearch";
             this.JualCustSearch.Primary = true;
             this.JualCustSearch.Size = new System.Drawing.Size(91, 23);
-            this.JualCustSearch.TabIndex = 2;
+            this.JualCustSearch.TabIndex = 8;
             this.JualCustSearch.Text = "Search";
             this.JualCustSearch.UseVisualStyleBackColor = true;
             this.JualCustSearch.Click += new System.EventHandler(this.JualCustSearch_Click);
@@ -2697,7 +2768,7 @@
             this.JualKodeSearch.Name = "JualKodeSearch";
             this.JualKodeSearch.Primary = true;
             this.JualKodeSearch.Size = new System.Drawing.Size(91, 23);
-            this.JualKodeSearch.TabIndex = 2;
+            this.JualKodeSearch.TabIndex = 7;
             this.JualKodeSearch.Text = "Search";
             this.JualKodeSearch.UseVisualStyleBackColor = true;
             this.JualKodeSearch.Click += new System.EventHandler(this.JualKodeSearch_Click);
@@ -2715,7 +2786,7 @@
             this.JualtxtSubtotal.SelectionLength = 0;
             this.JualtxtSubtotal.SelectionStart = 0;
             this.JualtxtSubtotal.Size = new System.Drawing.Size(232, 23);
-            this.JualtxtSubtotal.TabIndex = 1;
+            this.JualtxtSubtotal.TabIndex = 6;
             this.JualtxtSubtotal.Text = "0.00";
             this.JualtxtSubtotal.UseSystemPasswordChar = false;
             // 
@@ -2731,7 +2802,7 @@
             this.JualtxtKuantitas.SelectionLength = 0;
             this.JualtxtKuantitas.SelectionStart = 0;
             this.JualtxtKuantitas.Size = new System.Drawing.Size(232, 23);
-            this.JualtxtKuantitas.TabIndex = 1;
+            this.JualtxtKuantitas.TabIndex = 5;
             this.JualtxtKuantitas.UseSystemPasswordChar = false;
             this.JualtxtKuantitas.TextChanged += new System.EventHandler(this.JualtxtKuantitas_TextChanged);
             // 
@@ -2747,7 +2818,7 @@
             this.JualtxtHrgBarang.SelectionLength = 0;
             this.JualtxtHrgBarang.SelectionStart = 0;
             this.JualtxtHrgBarang.Size = new System.Drawing.Size(232, 23);
-            this.JualtxtHrgBarang.TabIndex = 1;
+            this.JualtxtHrgBarang.TabIndex = 4;
             this.JualtxtHrgBarang.UseSystemPasswordChar = false;
             // 
             // JualtxtBarang
@@ -2763,7 +2834,7 @@
             this.JualtxtBarang.SelectionLength = 0;
             this.JualtxtBarang.SelectionStart = 0;
             this.JualtxtBarang.Size = new System.Drawing.Size(232, 23);
-            this.JualtxtBarang.TabIndex = 1;
+            this.JualtxtBarang.TabIndex = 3;
             this.JualtxtBarang.Text = "Click Search";
             this.JualtxtBarang.UseSystemPasswordChar = false;
             // 
@@ -2780,7 +2851,7 @@
             this.JualtxtCustomer.SelectionLength = 0;
             this.JualtxtCustomer.SelectionStart = 0;
             this.JualtxtCustomer.Size = new System.Drawing.Size(232, 23);
-            this.JualtxtCustomer.TabIndex = 1;
+            this.JualtxtCustomer.TabIndex = 2;
             this.JualtxtCustomer.Text = "Click Search";
             this.JualtxtCustomer.UseSystemPasswordChar = false;
             // 
@@ -2883,7 +2954,7 @@
             this.daftartransaksi.Controls.Add(this.materialTabSelector7);
             this.daftartransaksi.Location = new System.Drawing.Point(4, 22);
             this.daftartransaksi.Name = "daftartransaksi";
-            this.daftartransaksi.Size = new System.Drawing.Size(615, 414);
+            this.daftartransaksi.Size = new System.Drawing.Size(627, 407);
             this.daftartransaksi.TabIndex = 2;
             this.daftartransaksi.Text = "Daftar Transaksi";
             this.daftartransaksi.UseVisualStyleBackColor = true;
@@ -2894,11 +2965,11 @@
             this.materialTabControl7.Controls.Add(this.daftarpembelian);
             this.materialTabControl7.Controls.Add(this.daftarsementara);
             this.materialTabControl7.Depth = 0;
-            this.materialTabControl7.Location = new System.Drawing.Point(0, 30);
+            this.materialTabControl7.Location = new System.Drawing.Point(-4, 34);
             this.materialTabControl7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabControl7.Name = "materialTabControl7";
             this.materialTabControl7.SelectedIndex = 0;
-            this.materialTabControl7.Size = new System.Drawing.Size(626, 393);
+            this.materialTabControl7.Size = new System.Drawing.Size(635, 387);
             this.materialTabControl7.TabIndex = 1;
             this.materialTabControl7.SelectedIndexChanged += new System.EventHandler(this.materialTabControl7_SelectedIndexChanged);
             // 
@@ -2907,27 +2978,33 @@
             this.daftarpenjualan.Controls.Add(this.dgvJualDetail);
             this.daftarpenjualan.Controls.Add(this.dgvJualMaster);
             this.daftarpenjualan.Location = new System.Drawing.Point(4, 22);
+            this.daftarpenjualan.Margin = new System.Windows.Forms.Padding(0);
             this.daftarpenjualan.Name = "daftarpenjualan";
-            this.daftarpenjualan.Padding = new System.Windows.Forms.Padding(3);
-            this.daftarpenjualan.Size = new System.Drawing.Size(618, 367);
+            this.daftarpenjualan.Size = new System.Drawing.Size(627, 361);
             this.daftarpenjualan.TabIndex = 0;
             this.daftarpenjualan.Text = "Daftar Penjualan";
             this.daftarpenjualan.UseVisualStyleBackColor = true;
             // 
             // dgvJualDetail
             // 
+            this.dgvJualDetail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvJualDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvJualDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvJualDetail.Location = new System.Drawing.Point(9, 162);
+            this.dgvJualDetail.Location = new System.Drawing.Point(8, 164);
             this.dgvJualDetail.Name = "dgvJualDetail";
-            this.dgvJualDetail.Size = new System.Drawing.Size(596, 194);
+            this.dgvJualDetail.RowHeadersVisible = false;
+            this.dgvJualDetail.Size = new System.Drawing.Size(647, 194);
             this.dgvJualDetail.TabIndex = 3;
             // 
             // dgvJualMaster
             // 
+            this.dgvJualMaster.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvJualMaster.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvJualMaster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvJualMaster.Location = new System.Drawing.Point(9, 8);
+            this.dgvJualMaster.Location = new System.Drawing.Point(8, 0);
             this.dgvJualMaster.Name = "dgvJualMaster";
-            this.dgvJualMaster.Size = new System.Drawing.Size(596, 153);
+            this.dgvJualMaster.RowHeadersVisible = false;
+            this.dgvJualMaster.Size = new System.Drawing.Size(648, 161);
             this.dgvJualMaster.TabIndex = 2;
             // 
             // daftarpembelian
@@ -2937,7 +3014,7 @@
             this.daftarpembelian.Location = new System.Drawing.Point(4, 22);
             this.daftarpembelian.Name = "daftarpembelian";
             this.daftarpembelian.Padding = new System.Windows.Forms.Padding(3);
-            this.daftarpembelian.Size = new System.Drawing.Size(618, 367);
+            this.daftarpembelian.Size = new System.Drawing.Size(627, 361);
             this.daftarpembelian.TabIndex = 1;
             this.daftarpembelian.Text = "Daftar Pembelian";
             this.daftarpembelian.UseVisualStyleBackColor = true;
@@ -2945,19 +3022,19 @@
             // dgvBeliDetail
             // 
             this.dgvBeliDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBeliDetail.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvBeliDetail.Location = new System.Drawing.Point(3, 162);
+            this.dgvBeliDetail.Location = new System.Drawing.Point(8, 169);
             this.dgvBeliDetail.Name = "dgvBeliDetail";
-            this.dgvBeliDetail.Size = new System.Drawing.Size(612, 202);
+            this.dgvBeliDetail.RowHeadersVisible = false;
+            this.dgvBeliDetail.Size = new System.Drawing.Size(676, 191);
             this.dgvBeliDetail.TabIndex = 5;
             // 
             // dgvBeliMaster
             // 
             this.dgvBeliMaster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBeliMaster.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvBeliMaster.Location = new System.Drawing.Point(3, 3);
+            this.dgvBeliMaster.Location = new System.Drawing.Point(8, 0);
             this.dgvBeliMaster.Name = "dgvBeliMaster";
-            this.dgvBeliMaster.Size = new System.Drawing.Size(612, 150);
+            this.dgvBeliMaster.RowHeadersVisible = false;
+            this.dgvBeliMaster.Size = new System.Drawing.Size(676, 163);
             this.dgvBeliMaster.TabIndex = 4;
             // 
             // daftarsementara
@@ -2966,7 +3043,7 @@
             this.daftarsementara.Controls.Add(this.dgvSementara);
             this.daftarsementara.Location = new System.Drawing.Point(4, 22);
             this.daftarsementara.Name = "daftarsementara";
-            this.daftarsementara.Size = new System.Drawing.Size(618, 367);
+            this.daftarsementara.Size = new System.Drawing.Size(627, 361);
             this.daftarsementara.TabIndex = 2;
             this.daftarsementara.Text = "Daftar Data Sementara";
             this.daftarsementara.UseVisualStyleBackColor = true;
@@ -2978,9 +3055,10 @@
             this.dgvSementara.AllowUserToResizeColumns = false;
             this.dgvSementara.AllowUserToResizeRows = false;
             this.dgvSementara.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSementara.Location = new System.Drawing.Point(3, 3);
+            this.dgvSementara.Location = new System.Drawing.Point(12, 4);
             this.dgvSementara.Name = "dgvSementara";
-            this.dgvSementara.Size = new System.Drawing.Size(605, 353);
+            this.dgvSementara.RowHeadersVisible = false;
+            this.dgvSementara.Size = new System.Drawing.Size(645, 356);
             this.dgvSementara.TabIndex = 0;
             this.dgvSementara.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSementara_CellClick);
             // 
@@ -2988,10 +3066,11 @@
             // 
             this.materialTabSelector7.BaseTabControl = this.materialTabControl7;
             this.materialTabSelector7.Depth = 0;
-            this.materialTabSelector7.Location = new System.Drawing.Point(-7, 1);
+            this.materialTabSelector7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialTabSelector7.Location = new System.Drawing.Point(0, 1);
             this.materialTabSelector7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector7.Name = "materialTabSelector7";
-            this.materialTabSelector7.Size = new System.Drawing.Size(697, 23);
+            this.materialTabSelector7.Size = new System.Drawing.Size(651, 32);
             this.materialTabSelector7.TabIndex = 0;
             this.materialTabSelector7.Text = "materialTabSelector7";
             // 
@@ -2999,10 +3078,10 @@
             // 
             this.materialTabSelector6.BaseTabControl = this.materialTabControl6;
             this.materialTabSelector6.Depth = 0;
-            this.materialTabSelector6.Location = new System.Drawing.Point(-4, 0);
+            this.materialTabSelector6.Location = new System.Drawing.Point(0, 0);
             this.materialTabSelector6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector6.Name = "materialTabSelector6";
-            this.materialTabSelector6.Size = new System.Drawing.Size(630, 23);
+            this.materialTabSelector6.Size = new System.Drawing.Size(651, 23);
             this.materialTabSelector6.TabIndex = 0;
             this.materialTabSelector6.Text = "materialTabSelector6";
             // 
@@ -3011,11 +3090,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(627, 554);
+            this.ClientSize = new System.Drawing.Size(627, 543);
             this.Controls.Add(this.materialTabControl1);
             this.Controls.Add(this.materialTabSelector5);
             this.Name = "MainForm";
             this.Sizable = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Point of Sales";
             this.materialTabControl1.ResumeLayout(false);
             this.regis.ResumeLayout(false);
@@ -3054,7 +3134,7 @@
             this.materialTabControl6.ResumeLayout(false);
             this.pembelian.ResumeLayout(false);
             this.pembelian.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBeli)).EndInit();
             this.penjualan.ResumeLayout(false);
             this.penjualan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJual)).EndInit();
@@ -3240,25 +3320,25 @@
         private MaterialSkin.Controls.MaterialRaisedButton JualBarangSearch;
         private MaterialSkin.Controls.MaterialRaisedButton JualCustSearch;
         private MaterialSkin.Controls.MaterialRaisedButton JualKodeSearch;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton5;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField8;
-        private MaterialSkin.Controls.MaterialLabel materialLabel8;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton6;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton7;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton8;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField9;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField10;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField11;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField12;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField13;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField14;
-        private MaterialSkin.Controls.MaterialLabel materialLabel9;
-        private MaterialSkin.Controls.MaterialLabel materialLabel10;
-        private MaterialSkin.Controls.MaterialLabel materialLabel11;
-        private MaterialSkin.Controls.MaterialLabel materialLabel12;
-        private MaterialSkin.Controls.MaterialLabel materialLabel13;
-        private MaterialSkin.Controls.MaterialLabel materialLabel14;
+        private MaterialSkin.Controls.MaterialRaisedButton BeliAdd;
+        private MaterialSkin.Controls.MaterialSingleLineTextField BelitxtTotal;
+        private MaterialSkin.Controls.MaterialLabel BelilblTotal;
+        private System.Windows.Forms.DataGridView dgvBeli;
+        private MaterialSkin.Controls.MaterialRaisedButton BeliSearchBarang;
+        private MaterialSkin.Controls.MaterialRaisedButton BeliSearchSupplier;
+        private MaterialSkin.Controls.MaterialRaisedButton BeliSearchKode;
+        private MaterialSkin.Controls.MaterialSingleLineTextField BelitxtSubtotal;
+        private MaterialSkin.Controls.MaterialSingleLineTextField BelitxtKuantitas;
+        private MaterialSkin.Controls.MaterialSingleLineTextField BelitxtHPP;
+        private MaterialSkin.Controls.MaterialSingleLineTextField BelitxtBarang;
+        private MaterialSkin.Controls.MaterialSingleLineTextField BelitxtSupplier;
+        private MaterialSkin.Controls.MaterialSingleLineTextField BelitxtKode;
+        private MaterialSkin.Controls.MaterialLabel BelilblSubtotal;
+        private MaterialSkin.Controls.MaterialLabel BelilblKuantitas;
+        private MaterialSkin.Controls.MaterialLabel BelilblHPP;
+        private MaterialSkin.Controls.MaterialLabel BelilblBarang;
+        private MaterialSkin.Controls.MaterialLabel BelilblSupplier;
+        private MaterialSkin.Controls.MaterialLabel BelilblKode;
         private System.Windows.Forms.TabPage daftartransaksi;
         private MaterialSkin.Controls.MaterialTabControl materialTabControl7;
         private System.Windows.Forms.TabPage daftarpenjualan;
@@ -3270,6 +3350,10 @@
         private System.Windows.Forms.DataGridView dgvBeliMaster;
         private System.Windows.Forms.TabPage daftarsementara;
         private System.Windows.Forms.DataGridView dgvSementara;
+        private MaterialSkin.Controls.MaterialRaisedButton BeliReset;
+        private MaterialSkin.Controls.MaterialRaisedButton BeliCancel;
+        private MaterialSkin.Controls.MaterialRaisedButton JualReset;
+        private MaterialSkin.Controls.MaterialRaisedButton JualCancel;
 
 
 

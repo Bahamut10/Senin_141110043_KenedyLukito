@@ -10,7 +10,6 @@ E:\Mikroskil\Semester V\.NET Framework Lanjutan\New folder\Senin_141110043_Kened
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\Latihan_3_1\bin\Debug\Latihan_3_1.exe.config
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\Latihan_3_1\bin\Debug\Latihan_3_1.exe
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\Latihan_3_1\bin\Debug\Latihan_3_1.pdb
-D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\Latihan_3_1\obj\Debug\Latihan_3_1.csprojResolveAssemblyReference.cache
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\Latihan_3_1\obj\Debug\Latihan_3_1.Form1.resources
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\Latihan_3_1\obj\Debug\Latihan_3_1.Properties.Resources.resources
 D:\College\Mikroskil\Semester V\.NET Framework\Tugas\Senin_141110043_KenedyLukito\Latihan_3_1\obj\Debug\Latihan_3_1.csproj.GenerateResource.Cache

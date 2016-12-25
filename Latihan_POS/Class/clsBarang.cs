@@ -21,6 +21,10 @@ namespace Latihan_POS.Class
         public DateTime created_at { private set; get; }
         public DateTime updated_at { private set; get; }
 
+        public void SetID(int id)
+        {
+            this.ID = id;
+        }
         public void SetKode(string kode)
         {
             this.kode = kode;
@@ -130,11 +134,12 @@ namespace Latihan_POS.Class
             int jlhrecord = 0;
             MySqlDataAdapter da = new MySqlDataAdapter();
             MySqlCommand cmd = new MySqlCommand();
-            string sqlcmd = "delete from pos_barang where "+table+".ID="+id;
+            string sqlcmd = "delete from " + table + " where ID = @id";
             cmd.CommandText = sqlcmd;
             try
             {
                 clsDatabase.openDB();
+                cmd.Parameters.AddWithValue("@id", id);
                 cmd.Connection = clsDatabase.con;
                 da.DeleteCommand = cmd;
                 jlhrecord = da.DeleteCommand.ExecuteNonQuery();

@@ -151,6 +151,7 @@ namespace Latihan_POS.Class
                 clsDatabase.openDB();
                 ds = new DataSet();
                 da = new MySqlDataAdapter(select, clsDatabase.con);
+                da.SelectCommand.ExecuteScalar();
                 da.Fill(ds, table);
                 dgv.ReadOnly = true;
                 dgv.AllowUserToAddRows = false;

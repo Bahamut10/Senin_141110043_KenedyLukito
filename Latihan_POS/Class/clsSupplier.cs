@@ -12,6 +12,7 @@ namespace Latihan_POS.Class
     class clsSupplier
     {
         private static string table = "pos_supplier";
+        public int ID { private set; get; }
         public string kode { private set; get; }
         public string nama { private set; get; }
         public string alamat { private set; get; }
@@ -20,6 +21,10 @@ namespace Latihan_POS.Class
         public string pos { private set; get; }
         public DateTime created_at { private set; get; }
         public DateTime updated_at { private set; get; }
+        public void SetID(int id)
+        {
+            this.ID = id;
+        }
         public void SetKode(string kode)
         {
             this.kode = kode;
@@ -157,6 +162,36 @@ namespace Latihan_POS.Class
                 throw new Exception(ex.Message);
             }
             return da;
+        }
+        public static MySqlDataAdapter Daftar()
+        {
+            MySqlDataAdapter da;
+            string select = "SELECT * FROM " + table;
+            try
+            {
+                clsDatabase.openDB();
+                da = new MySqlDataAdapter(select, clsDatabase.con);
+                da.SelectCommand.ExecuteScalar();
+                clsDatabase.closeDB();
+            }
+            catch (Exception ex)
+            {
+                clsDatabase.closeDB();
+                throw new Exception(ex.Message);
+            }
+            return da;
+        }
+        public void setProperties(DataRow row)
+        {
+            this.ID = Convert.ToInt32(row[0]);
+            this.kode = row[1].ToString();
+            this.nama = row[2].ToString();
+            this.alamat = row[3].ToString();
+            this.pos = row[6].ToString();
+            this.telepon = row[5].ToString();
+            this.email = row[4].ToString();
+            this.created_at = Convert.ToDateTime(row[7]);
+            this.updated_at = Convert.ToDateTime(row[8]);
         }
     }
 }

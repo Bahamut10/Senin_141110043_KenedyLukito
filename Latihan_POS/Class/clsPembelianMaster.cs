@@ -9,57 +9,51 @@ using System.Data;
 
 namespace Latihan_POS.Class
 {
-    class clsPenjualanDetails
+    class clsPembelianMaster
     {
-        private static string table = "pos_penjualan_detail";
-        public clsBarang barang { private set; get; }
-        public clsPenjualanMaster penjualanmaster { private set; get; }
-        public decimal harga_barang { private set; get; }
-        public int kuantitas { private set; get; }
+        private static string table = "pos_pembelian";
+        public int ID { private set; get; }
+        public string kode { private set; get; }
+        public clsSupplier supplier { private set; get; }
         public DateTime created_at { private set; get; }
         public DateTime updated_at { private set; get; }
-        public void setPenjualan(clsPenjualanMaster penjualanmaster)
+        public void setSupplier(clsSupplier supplier)
         {
-            this.penjualanmaster = penjualanmaster;
+            this.supplier = supplier;
         }
-        public void SetBarang(clsBarang barang)
+        public void SetID(int id)
         {
-            this.barang = barang;   
+            this.ID = id;
         }
-        public void SetHargaBarang(decimal harga_barang)
+        public void SetKode(string kode)
         {
-            this.harga_barang = harga_barang;
-        }
-        public void SetKuantitas(int kuantitas)
-        {
-            this.kuantitas = kuantitas;
+            this.kode = kode;
         }
         public void SetCreatetime(DateTime created_at)
         {
             this.created_at = created_at;
         }
-        public void SetUpdatedtime(DateTime updated_at)
+        public void SetUpdatetime(DateTime updated_at)
         {
             this.updated_at = updated_at;
         }
-        public int SearchSell()
+        public int SearchBuy(string code)
         {
             int jlhrecord = 0;
             MySqlDataAdapter da = new MySqlDataAdapter();
             MySqlCommand cmd = new MySqlCommand();
-            string select = "SELECT * FROM pos_penjualan_detail WHERE Id_penjualan = @idpenjualan and Id_barang = @idbarang";
+            string select = "SELECT * FROM " + table + " WHERE Kode = @code";
             clsDatabase.openDB();
             cmd.Connection = clsDatabase.con;
             cmd.CommandText = select;
             da.SelectCommand = cmd;
             try
             {
-                cmd.Parameters.AddWithValue("@idpenjualan", penjualanmaster.ID);
-                cmd.Parameters.AddWithValue("@idbarang", barang.ID);
+                cmd.Parameters.AddWithValue("@code", code);
                 DataSet ds = new DataSet();
                 da.SelectCommand.ExecuteNonQuery();
-                da.Fill(ds, "penjualan");
-                jlhrecord = ds.Tables["penjualan"].Rows.Count;
+                da.Fill(ds, "pembelian");
+                jlhrecord = ds.Tables["pembelian"].Rows.Count;
                 clsDatabase.closeDB();
             }
             catch (Exception ex)
@@ -69,20 +63,17 @@ namespace Latihan_POS.Class
             }
             return jlhrecord;
         }
-        
-        public int AddSellDetail()
+        public int AddBuy()
         {
             int jlhrecord = 0;
             MySqlDataAdapter da = new MySqlDataAdapter();
             MySqlCommand cmd = new MySqlCommand();
-            string sqlcmd = "insert into " + table + " (Id_penjualan, Id_barang, Harga_barang, Kuantitas, Created_at, Updated_at) value (@idpenjualan,@idbarang,@hargabarang,@kuantitas,@create,@update)";
+            string sqlcmd = "insert into " + table + " (Kode,ID_supplier,Created_at,Updated_at) value (@kode,@idsupplier,@create,@update)";
             cmd.CommandText = sqlcmd;
             try
             {
-                cmd.Parameters.AddWithValue("@idpenjualan", penjualanmaster.ID);
-                cmd.Parameters.AddWithValue("@idbarang", barang.ID);
-                cmd.Parameters.AddWithValue("@hargabarang", harga_barang);
-                cmd.Parameters.AddWithValue("@kuantitas", kuantitas);
+                cmd.Parameters.AddWithValue("@kode", kode);
+                cmd.Parameters.AddWithValue("@idsupplier", supplier.ID);
                 cmd.Parameters.AddWithValue("@create", created_at);
                 cmd.Parameters.AddWithValue("@update", updated_at);
                 clsDatabase.openDB();
@@ -96,21 +87,21 @@ namespace Latihan_POS.Class
                 clsDatabase.closeDB();
                 throw new Exception(ex.Message);
             }
+            searchID();
             return jlhrecord;
         }
-        public int UpdateSellDetail()
+        public int UpdateBuy(string code)
         {
+            this.kode = code;
             int jlhrecord = 0;
             MySqlDataAdapter da = new MySqlDataAdapter();
             MySqlCommand cmd = new MySqlCommand();
-            string sqlcmd = "update " + table + " set Harga_Barang = @hargabarang, Kuantitas = @kuantitas, Updated_at = @update where Id_penjualan = @idpenjualan and Id_barang = @idbarang";
+            string sqlcmd = "update " + table + " set Id_supplier = @idsupplier, Updated_at = @update where Kode = @code";
             cmd.CommandText = sqlcmd;
             try
             {
-                cmd.Parameters.AddWithValue("@idpenjualan", penjualanmaster.ID);
-                cmd.Parameters.AddWithValue("@idbarang", barang.ID);
-                cmd.Parameters.AddWithValue("@hargabarang", harga_barang);
-                cmd.Parameters.AddWithValue("@kuantitas", kuantitas);
+                cmd.Parameters.AddWithValue("@idsupplier", supplier.ID);
+                cmd.Parameters.AddWithValue("@code", code);
                 cmd.Parameters.AddWithValue("@update", updated_at);
                 clsDatabase.openDB();
                 cmd.Connection = clsDatabase.con;
@@ -123,9 +114,10 @@ namespace Latihan_POS.Class
                 clsDatabase.closeDB();
                 throw new Exception(ex.Message);
             }
+            searchID();
             return jlhrecord;
         }
-        public int DeleteSellDetail(string code)
+        public int DeleteBuy(string code)
         {
             int jlhrecord = 0;
             clsDatabase.openDB();
@@ -149,38 +141,7 @@ namespace Latihan_POS.Class
             }
             return jlhrecord;
         }
-        public MySqlDataAdapter Daftar(DataGridView dgv)
-        {
-            MySqlDataAdapter da;
-            DataSet ds;
-            string select = "SELECT * FROM " + table + " WHERE Id_penjualan = @idpenjualan";
-            try
-            {
-                clsDatabase.openDB();
-                ds = new DataSet();
-                da = new MySqlDataAdapter();
-                MySqlCommand cmd = new MySqlCommand();
-                cmd.Connection = clsDatabase.con;
-                cmd.CommandText = select;
-                cmd.Parameters.AddWithValue("@idpenjualan", penjualanmaster.ID);
-                da.SelectCommand = cmd;
-                da.SelectCommand.ExecuteNonQuery();
-                da.Fill(ds, table);
-                dgv.ReadOnly = true;
-                dgv.AllowUserToAddRows = false;
-                dgv.AllowUserToDeleteRows = false;
-                dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dgv.DataSource = ds.Tables[table];
-                clsDatabase.closeDB();
-            }
-            catch (Exception ex)
-            {
-                clsDatabase.closeDB();
-                throw new Exception(ex.Message);
-            }
-            return da;
-        }
-        public MySqlDataAdapter DaftarShow(DataGridView dgv,string table)
+        public MySqlDataAdapter Daftar(DataGridView dgv, string table)
         {
             MySqlDataAdapter da;
             DataSet ds;
@@ -190,7 +151,6 @@ namespace Latihan_POS.Class
                 clsDatabase.openDB();
                 ds = new DataSet();
                 da = new MySqlDataAdapter(select, clsDatabase.con);
-                da.SelectCommand.ExecuteScalar();
                 da.Fill(ds, table);
                 dgv.ReadOnly = true;
                 dgv.AllowUserToAddRows = false;
@@ -207,6 +167,91 @@ namespace Latihan_POS.Class
             }
             return da;
         }
-        
+        public static MySqlDataAdapter Daftar()
+        {
+            MySqlDataAdapter da;
+            string select = "SELECT * FROM " + table;
+            try
+            {
+                clsDatabase.openDB();
+                da = new MySqlDataAdapter();
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = clsDatabase.con;
+                cmd.CommandText = select;
+                da.SelectCommand = cmd;
+                da.SelectCommand.ExecuteScalar();
+                clsDatabase.closeDB();
+            }
+            catch (Exception ex)
+            {
+                clsDatabase.closeDB();
+                throw new Exception(ex.Message);
+            }
+            return da;
+        }
+        public void setProperties(DataRow row)
+        {
+            this.ID = Convert.ToInt32(row[0]);
+            this.kode = row[1].ToString();
+            this.created_at = Convert.ToDateTime(row[3]);
+            this.updated_at = Convert.ToDateTime(row[4]);
+            this.supplier = new clsSupplier();
+            this.supplier.SetID(Convert.ToInt32(row[2]));
+
+            // SEARCH supplier BY ID
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            string selectAll = "SELECT * FROM pos_supplier WHERE id = @id";
+
+            MySqlCommand cmd;
+            cmd = new MySqlCommand(selectAll, clsDatabase.con);
+            cmd.Parameters.AddWithValue("@id", supplier.ID);
+            da.SelectCommand = cmd;
+            try
+            {
+                clsDatabase.openDB();
+                DataTable dtc = new DataTable();
+                da.SelectCommand.ExecuteNonQuery();
+                da.Fill(dtc);
+                clsDatabase.closeDB();
+
+                this.supplier.SetNama(dtc.Rows[0][2].ToString());
+                this.supplier.SetAlamat(dtc.Rows[0][3].ToString());
+                this.supplier.SetPos(dtc.Rows[0][4].ToString());
+                this.supplier.SetTelepon(dtc.Rows[0][5].ToString());
+                this.supplier.SetEmail(dtc.Rows[0][6].ToString());
+                this.supplier.SetCreatetime(Convert.ToDateTime(dtc.Rows[0][7]));
+                this.supplier.SetUpdatedtime(Convert.ToDateTime(dtc.Rows[0][8]));
+            }
+            catch (Exception ex)
+            {
+                clsDatabase.closeDB();
+                throw new Exception(ex.Message);
+            }
+        }
+        private void searchID()
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            string selectAll = "SELECT id FROM " + table + " WHERE kode = @kode";
+
+            MySqlCommand cmd;
+            cmd = new MySqlCommand(selectAll, clsDatabase.con);
+            cmd.Parameters.AddWithValue("@kode", this.kode);
+            da.SelectCommand = cmd;
+            try
+            {
+                clsDatabase.openDB();
+                DataSet ds = new DataSet();
+                da.SelectCommand.ExecuteNonQuery();
+                da.Fill(ds, "searchID");
+                clsDatabase.closeDB();
+
+                this.ID = Convert.ToInt32(ds.Tables["searchID"].Rows[0][0]);
+            }
+            catch (Exception ex)
+            {
+                clsDatabase.closeDB();
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
